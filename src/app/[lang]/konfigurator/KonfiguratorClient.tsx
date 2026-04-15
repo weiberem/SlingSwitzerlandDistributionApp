@@ -17,7 +17,7 @@ import {
   Download,
   Send,
 } from "lucide-react";
-import { aircraft, formatPrice } from "@/data/aircraft";
+import { aircraft } from "@/data/aircraft";
 import { configuratorCategories } from "@/data/configurator";
 import Button from "@/components/ui/Button";
 import { clsx } from "clsx";
@@ -85,22 +85,6 @@ export default function KonfiguratorClient() {
     },
     []
   );
-
-  const totalPrice = (() => {
-    let base = selectedAircraft?.basePrice || 0;
-    let optionsTotal = 0;
-    for (const cat of configuratorCategories) {
-      const selected = selectedOptions[cat.id] || [];
-      for (const opt of cat.options) {
-        if (selected.includes(opt.id)) {
-          optionsTotal += opt.price;
-        }
-      }
-    }
-    return base + optionsTotal;
-  })();
-
-  const optionsPrice = totalPrice - (selectedAircraft?.basePrice || 0);
 
   const canProceed =
     currentStep === 0 ? selectedModel !== null : true;
@@ -242,8 +226,8 @@ export default function KonfiguratorClient() {
                             <p className="text-xs text-neutral-400 mt-1">
                               {plane.tagline}
                             </p>
-                            <div className="mt-2 text-sm font-semibold text-brand-500">
-                              ab {formatPrice(plane.basePrice)}
+                            <div className="mt-2 text-xs text-neutral-400">
+                              Preis auf Anfrage
                             </div>
                           </div>
                         </button>
@@ -325,12 +309,12 @@ export default function KonfiguratorClient() {
                                         "text-sm font-semibold",
                                         option.price === 0
                                           ? "text-green-400"
-                                          : "text-white"
+                                          : "text-neutral-400"
                                       )}
                                     >
                                       {option.price === 0
                                         ? "Inklusive"
-                                        : `+ ${formatPrice(option.price)}`}
+                                        : "Aufpreis"}
                                     </span>
                                   </div>
                                 </div>
@@ -377,11 +361,8 @@ export default function KonfiguratorClient() {
                           </div>
                           <div className="ml-auto text-right">
                             <span className="text-xs text-neutral-400">
-                              Basispreis
+                              Preis auf Anfrage
                             </span>
-                            <div className="font-bold text-white">
-                              {formatPrice(selectedAircraft.basePrice)}
-                            </div>
                           </div>
                         </div>
                       </div>
@@ -422,7 +403,7 @@ export default function KonfiguratorClient() {
                                 <span className="text-sm font-medium text-white">
                                   {opt.price === 0
                                     ? "Inkl."
-                                    : formatPrice(opt.price)}
+                                    : "Aufpreis"}
                                 </span>
                               </div>
                             ))}
@@ -577,7 +558,7 @@ export default function KonfiguratorClient() {
               <div className="sticky top-36">
                 <div className="bg-neutral-900 rounded-xl border border-neutral-800 p-6 shadow-sm">
                   <h3 className="text-sm font-semibold text-neutral-400 uppercase tracking-wider mb-4">
-                    Preisübersicht
+                    Ihre Konfiguration
                   </h3>
 
                   {selectedAircraft ? (
@@ -598,36 +579,14 @@ export default function KonfiguratorClient() {
                         </div>
                       </div>
 
-                      <div className="space-y-3 mb-6">
-                        <div className="flex justify-between text-sm">
-                          <span className="text-neutral-400">Basispreis</span>
-                          <span className="font-medium text-white">
-                            {formatPrice(selectedAircraft.basePrice)}
-                          </span>
-                        </div>
-                        {optionsPrice > 0 && (
-                          <div className="flex justify-between text-sm">
-                            <span className="text-neutral-400">Optionen</span>
-                            <span className="font-medium text-white">
-                              + {formatPrice(optionsPrice)}
-                            </span>
-                          </div>
-                        )}
-                      </div>
-
                       <div className="pt-4 border-t border-neutral-800">
-                        <div className="flex justify-between items-end">
-                          <span className="text-sm font-medium text-neutral-400">
-                            Gesamtpreis
+                        <p className="text-sm text-neutral-400 leading-relaxed">
+                          Ihre Konfiguration wird gespeichert. Kontaktieren Sie uns für ein individuelles Angebot.
+                        </p>
+                        <div className="mt-4 text-center">
+                          <span className="text-sm font-medium text-brand-400">
+                            Preis auf Anfrage
                           </span>
-                          <div className="text-right">
-                            <div className="text-2xl font-bold text-white">
-                              {formatPrice(totalPrice)}
-                            </div>
-                            <span className="text-xs text-neutral-400">
-                              inkl. Optionen, exkl. MwSt.
-                            </span>
-                          </div>
                         </div>
                       </div>
                     </>
@@ -643,7 +602,6 @@ export default function KonfiguratorClient() {
 
                 {selectedAircraft && (
                   <p className="text-xs text-neutral-400 mt-4 text-center">
-                    Preise sind unverbindlich. Änderungen vorbehalten.
                     Verbindliches Angebot auf Anfrage.
                   </p>
                 )}

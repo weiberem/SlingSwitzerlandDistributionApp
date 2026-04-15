@@ -17,7 +17,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import HeroVideo from "@/components/home/HeroVideo";
 import YouTubeBackground from "@/components/ui/YouTubeBackground";
-import { aircraft, formatPrice } from "@/data/aircraft";
+import { aircraft } from "@/data/aircraft";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -104,9 +104,9 @@ export default function HomePage() {
               className="mt-20 grid grid-cols-3 gap-8 max-w-lg"
             >
               {[
-                { value: "4", label: "Modelle" },
+                { value: "3", label: "Modelle" },
                 { value: "2-4", label: "Sitzplätze" },
-                { value: "ab 195k", label: "CHF" },
+                { value: "140", label: "kts max." },
               ].map((stat) => (
                 <div key={stat.label}>
                   <div className="text-2xl sm:text-3xl font-bold text-white">
@@ -185,12 +185,6 @@ export default function HomePage() {
                         <p className="text-sm text-brand-500 font-medium mt-1">
                           {plane.tagline}
                         </p>
-                      </div>
-                      <div className="text-right">
-                        <span className="text-xs text-neutral-500">ab</span>
-                        <div className="text-lg font-bold text-white">
-                          {formatPrice(plane.basePrice)}
-                        </div>
                       </div>
                     </div>
 
@@ -302,8 +296,8 @@ export default function HomePage() {
             </h2>
             <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
               Wählen Sie Ihr Modell, die Farbe, Avionik und Ausstattung. Unser
-              Konfigurator zeigt Ihnen in Echtzeit den Preis Ihrer
-              Wunschkonfiguration.
+              Konfigurator hilft Ihnen, Ihre individuelle
+              Wunschkonfiguration zusammenzustellen.
             </p>
             <div className="mt-10">
               <Button

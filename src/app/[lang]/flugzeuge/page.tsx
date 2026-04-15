@@ -6,7 +6,7 @@ import { Users, Clock, ChevronRight, ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import YouTubeBackground from "@/components/ui/YouTubeBackground";
-import { aircraft, formatPrice } from "@/data/aircraft";
+import { aircraft } from "@/data/aircraft";
 
 export default function FlugzeugePage() {
   return (
@@ -70,10 +70,9 @@ export default function FlugzeugePage() {
                           </p>
                         </div>
                         <div className="text-right hidden sm:block">
-                          <span className="text-xs text-neutral-400">ab</span>
-                          <div className="text-2xl font-bold text-white">
-                            {formatPrice(plane.basePrice)}
-                          </div>
+                          <span className="text-sm text-neutral-400">
+                            Preis auf Anfrage
+                          </span>
                         </div>
                       </div>
 

@@ -9,7 +9,7 @@ import {
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import YouTubeBackground from "@/components/ui/YouTubeBackground";
-import { Aircraft, formatPrice } from "@/data/aircraft";
+import { Aircraft } from "@/data/aircraft";
 
 export default function AircraftDetailClient({
   aircraft: plane,
@@ -50,12 +50,7 @@ export default function AircraftDetailClient({
                 {plane.longDescription}
               </p>
               <div className="mt-8 flex items-center gap-6">
-                <div>
-                  <span className="text-sm text-white/60">ab</span>
-                  <div className="text-3xl font-bold text-white">
-                    {formatPrice(plane.basePrice)}
-                  </div>
-                </div>
+                <span className="text-sm text-white/60">Preis auf Anfrage</span>
                 <Button
                   href={`/konfigurator?model=${plane.id}`}
                   size="lg"

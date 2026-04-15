@@ -73,16 +73,20 @@ export default function Navigation({
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
-          {/* Logo */}
-          <Link href={`/${lang}`} className="flex items-center group">
-            <Image
-              src="/logos/SlingSwitzerlandLogo.jpg"
-              alt="Sling Aircraft Switzerland"
-              width={180}
-              height={60}
-              className="h-12 w-auto object-contain"
-              priority
-            />
+          {/* Logo with fading black background */}
+          <Link href={`/${lang}`} className="relative flex items-center group -ml-4">
+            <div className="relative px-4 py-2">
+              {/* Black background that fades out */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black via-black to-transparent rounded-r-2xl" />
+              <Image
+                src="/logos/SlingSwitzerlandLogo.jpg"
+                alt="Sling Aircraft Switzerland"
+                width={220}
+                height={70}
+                className="relative h-14 w-auto object-contain"
+                priority
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
