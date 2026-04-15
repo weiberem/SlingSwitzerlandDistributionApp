@@ -34,7 +34,7 @@ export default function FlugzeugePage() {
       </section>
 
       {/* Aircraft Grid */}
-      <section className="py-24 bg-neutral-50">
+      <section className="py-24 bg-neutral-950">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="space-y-8">
             {aircraft.map((plane, index) => (
@@ -47,7 +47,7 @@ export default function FlugzeugePage() {
               >
                 <Link
                   href={`/flugzeuge/${plane.id}`}
-                  className="group block bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:border-brand-200 hover:shadow-xl hover:shadow-brand-500/5 transition-all duration-500"
+                  className="group block bg-neutral-900 rounded-2xl border border-neutral-800 overflow-hidden hover:border-brand-600/50 hover:shadow-xl hover:shadow-brand-500/5 transition-all duration-500"
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-5">
                     <div
@@ -59,22 +59,22 @@ export default function FlugzeugePage() {
                     <div className="lg:col-span-3 p-8 lg:p-10">
                       <div className="flex items-start justify-between mb-4">
                         <div>
-                          <h2 className="text-2xl font-bold text-neutral-900 group-hover:text-brand-600 transition-colors">
+                          <h2 className="text-2xl font-bold text-white group-hover:text-brand-500 transition-colors">
                             {plane.name}
                           </h2>
-                          <p className="text-brand-600 font-medium mt-1">
+                          <p className="text-brand-500 font-medium mt-1">
                             {plane.tagline}
                           </p>
                         </div>
                         <div className="text-right hidden sm:block">
-                          <span className="text-xs text-neutral-500">ab</span>
-                          <div className="text-2xl font-bold text-neutral-900">
+                          <span className="text-xs text-neutral-400">ab</span>
+                          <div className="text-2xl font-bold text-white">
                             {formatPrice(plane.basePrice)}
                           </div>
                         </div>
                       </div>
 
-                      <p className="text-neutral-500 leading-relaxed mb-6">
+                      <p className="text-neutral-400 leading-relaxed mb-6">
                         {plane.description}
                       </p>
 
@@ -82,12 +82,12 @@ export default function FlugzeugePage() {
                         {plane.specs.slice(0, 4).map((spec) => (
                           <div
                             key={spec.label}
-                            className="bg-neutral-50 rounded-lg p-3"
+                            className="bg-neutral-800 rounded-lg p-3"
                           >
                             <div className="text-xs text-neutral-400 mb-1">
                               {spec.label}
                             </div>
-                            <div className="text-sm font-semibold text-neutral-900">
+                            <div className="text-sm font-semibold text-white">
                               {spec.value}
                             </div>
                           </div>
@@ -101,7 +101,7 @@ export default function FlugzeugePage() {
                             {plane.seats} Sitze
                           </span>
                         </div>
-                        <span className="flex items-center text-sm font-semibold text-brand-600 group-hover:gap-3 gap-2 transition-all">
+                        <span className="flex items-center text-sm font-semibold text-brand-500 group-hover:gap-3 gap-2 transition-all">
                           Mehr erfahren
                           <ChevronRight className="h-4 w-4" />
                         </span>
@@ -120,7 +120,7 @@ export default function FlugzeugePage() {
             viewport={{ once: true }}
             className="mt-16 text-center"
           >
-            <p className="text-neutral-500 mb-6">
+            <p className="text-neutral-400 mb-6">
               Noch unsicher? Konfigurieren Sie Ihr Wunschflugzeug online.
             </p>
             <Button href="/konfigurator">

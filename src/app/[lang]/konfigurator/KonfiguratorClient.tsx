@@ -142,7 +142,7 @@ export default function KonfiguratorClient() {
       </section>
 
       {/* Step Indicator */}
-      <div className="sticky top-20 z-40 bg-white border-b border-neutral-200 shadow-sm">
+      <div className="sticky top-20 z-40 bg-black/95 backdrop-blur border-b border-neutral-800 shadow-sm">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-1 py-3 overflow-x-auto">
             {steps.map((step, index) => {
@@ -158,9 +158,9 @@ export default function KonfiguratorClient() {
                   className={clsx(
                     "flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium whitespace-nowrap transition-all",
                     isActive
-                      ? "bg-brand-50 text-brand-600"
+                      ? "bg-brand-600/15 text-brand-400"
                       : isCompleted
-                        ? "text-brand-500 hover:bg-brand-50"
+                        ? "text-brand-500 hover:bg-brand-600/15"
                         : "text-neutral-400"
                   )}
                 >
@@ -170,8 +170,8 @@ export default function KonfiguratorClient() {
                       isActive
                         ? "bg-brand-600 text-white"
                         : isCompleted
-                          ? "bg-brand-100 text-brand-600"
-                          : "bg-neutral-100 text-neutral-400"
+                          ? "bg-brand-600/20 text-brand-400"
+                          : "bg-neutral-800 text-neutral-400"
                     )}
                   >
                     {isCompleted ? (
@@ -182,7 +182,7 @@ export default function KonfiguratorClient() {
                   </div>
                   <span className="hidden sm:inline">{step.label}</span>
                   {index < steps.length - 1 && (
-                    <ChevronRight className="h-3 w-3 text-neutral-300 ml-1" />
+                    <ChevronRight className="h-3 w-3 text-neutral-600 ml-1" />
                   )}
                 </button>
               );
@@ -192,7 +192,7 @@ export default function KonfiguratorClient() {
       </div>
 
       {/* Main Content */}
-      <section className="py-12 bg-neutral-50 min-h-[60vh]">
+      <section className="py-12 bg-neutral-950 min-h-[60vh]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left: Options */}
@@ -207,10 +207,10 @@ export default function KonfiguratorClient() {
                     exit={{ opacity: 0, x: -20 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <h2 className="text-2xl font-bold text-neutral-900 mb-2">
+                    <h2 className="text-2xl font-bold text-white mb-2">
                       Wählen Sie Ihr Modell
                     </h2>
-                    <p className="text-neutral-500 mb-8">
+                    <p className="text-neutral-400 mb-8">
                       Welches Sling-Modell passt zu Ihnen?
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -222,7 +222,7 @@ export default function KonfiguratorClient() {
                             "text-left rounded-xl border-2 overflow-hidden transition-all duration-300",
                             selectedModel === plane.id
                               ? "border-brand-500 shadow-lg shadow-brand-500/10"
-                              : "border-neutral-200 hover:border-neutral-300"
+                              : "border-neutral-800 hover:border-neutral-700"
                           )}
                         >
                           <div
@@ -235,14 +235,14 @@ export default function KonfiguratorClient() {
                               </div>
                             )}
                           </div>
-                          <div className="p-4 bg-white">
-                            <h3 className="font-bold text-neutral-900">
+                          <div className="p-4 bg-neutral-900">
+                            <h3 className="font-bold text-white">
                               {plane.name}
                             </h3>
-                            <p className="text-xs text-neutral-500 mt-1">
+                            <p className="text-xs text-neutral-400 mt-1">
                               {plane.tagline}
                             </p>
-                            <div className="mt-2 text-sm font-semibold text-brand-600">
+                            <div className="mt-2 text-sm font-semibold text-brand-500">
                               ab {formatPrice(plane.basePrice)}
                             </div>
                           </div>
@@ -270,12 +270,12 @@ export default function KonfiguratorClient() {
                         transition={{ duration: 0.3 }}
                       >
                         <div className="flex items-center gap-3 mb-2">
-                          <CategoryIcon className="h-6 w-6 text-brand-600" />
-                          <h2 className="text-2xl font-bold text-neutral-900">
+                          <CategoryIcon className="h-6 w-6 text-brand-500" />
+                          <h2 className="text-2xl font-bold text-white">
                             {category.name}
                           </h2>
                         </div>
-                        <p className="text-neutral-500 mb-8">
+                        <p className="text-neutral-400 mb-8">
                           {category.description}
                         </p>
                         <div className="space-y-3">
@@ -290,10 +290,10 @@ export default function KonfiguratorClient() {
                                   toggleOption(category.id, option.id)
                                 }
                                 className={clsx(
-                                  "w-full text-left p-5 rounded-xl border-2 transition-all duration-300 bg-white",
+                                  "w-full text-left p-5 rounded-xl border-2 transition-all duration-300 bg-neutral-900",
                                   isSelected
                                     ? "border-brand-500 shadow-md shadow-brand-500/10"
-                                    : "border-neutral-200 hover:border-neutral-300"
+                                    : "border-neutral-800 hover:border-neutral-700"
                                 )}
                               >
                                 <div className="flex items-start justify-between">
@@ -304,18 +304,18 @@ export default function KonfiguratorClient() {
                                           "w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all",
                                           isSelected
                                             ? "bg-brand-600 border-brand-600"
-                                            : "border-neutral-300"
+                                            : "border-neutral-700"
                                         )}
                                       >
                                         {isSelected && (
                                           <Check className="h-3 w-3 text-white" />
                                         )}
                                       </div>
-                                      <h3 className="font-semibold text-neutral-900">
+                                      <h3 className="font-semibold text-white">
                                         {option.name}
                                       </h3>
                                     </div>
-                                    <p className="text-sm text-neutral-500 mt-1 ml-8">
+                                    <p className="text-sm text-neutral-400 mt-1 ml-8">
                                       {option.description}
                                     </p>
                                   </div>
@@ -324,8 +324,8 @@ export default function KonfiguratorClient() {
                                       className={clsx(
                                         "text-sm font-semibold",
                                         option.price === 0
-                                          ? "text-green-600"
-                                          : "text-neutral-900"
+                                          ? "text-green-400"
+                                          : "text-white"
                                       )}
                                     >
                                       {option.price === 0
@@ -351,16 +351,16 @@ export default function KonfiguratorClient() {
                     exit={{ opacity: 0, x: -20 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <h2 className="text-2xl font-bold text-neutral-900 mb-2">
+                    <h2 className="text-2xl font-bold text-white mb-2">
                       Ihre Konfiguration
                     </h2>
-                    <p className="text-neutral-500 mb-8">
+                    <p className="text-neutral-400 mb-8">
                       Überprüfen Sie Ihre Auswahl und senden Sie eine Anfrage.
                     </p>
 
                     {/* Model */}
                     {selectedAircraft && (
-                      <div className="bg-white rounded-xl border border-neutral-200 p-6 mb-6">
+                      <div className="bg-neutral-900 rounded-xl border border-neutral-800 p-6 mb-6">
                         <div className="flex items-center gap-4">
                           <div
                             className={`w-16 h-16 rounded-xl bg-gradient-to-br ${selectedAircraft.heroColor} flex items-center justify-center`}
@@ -368,18 +368,18 @@ export default function KonfiguratorClient() {
                             <Plane className="h-8 w-8 text-white/40" />
                           </div>
                           <div>
-                            <h3 className="text-lg font-bold text-neutral-900">
+                            <h3 className="text-lg font-bold text-white">
                               {selectedAircraft.name}
                             </h3>
-                            <p className="text-sm text-neutral-500">
+                            <p className="text-sm text-neutral-400">
                               {selectedAircraft.tagline}
                             </p>
                           </div>
                           <div className="ml-auto text-right">
-                            <span className="text-xs text-neutral-500">
+                            <span className="text-xs text-neutral-400">
                               Basispreis
                             </span>
-                            <div className="font-bold text-neutral-900">
+                            <div className="font-bold text-white">
                               {formatPrice(selectedAircraft.basePrice)}
                             </div>
                           </div>
@@ -399,11 +399,11 @@ export default function KonfiguratorClient() {
                       return (
                         <div
                           key={cat.id}
-                          className="bg-white rounded-xl border border-neutral-200 p-6 mb-4"
+                          className="bg-neutral-900 rounded-xl border border-neutral-800 p-6 mb-4"
                         >
                           <div className="flex items-center gap-2 mb-4">
-                            <CatIcon className="h-4 w-4 text-brand-600" />
-                            <h4 className="font-semibold text-neutral-900">
+                            <CatIcon className="h-4 w-4 text-brand-500" />
+                            <h4 className="font-semibold text-white">
                               {cat.name}
                             </h4>
                           </div>
@@ -415,11 +415,11 @@ export default function KonfiguratorClient() {
                               >
                                 <div className="flex items-center gap-2">
                                   <Check className="h-4 w-4 text-brand-500" />
-                                  <span className="text-sm text-neutral-700">
+                                  <span className="text-sm text-neutral-400">
                                     {opt.name}
                                   </span>
                                 </div>
-                                <span className="text-sm font-medium text-neutral-900">
+                                <span className="text-sm font-medium text-white">
                                   {opt.price === 0
                                     ? "Inkl."
                                     : formatPrice(opt.price)}
@@ -455,9 +455,9 @@ export default function KonfiguratorClient() {
                       <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="bg-white rounded-xl border border-neutral-200 p-6 mt-8"
+                        className="bg-neutral-900 rounded-xl border border-neutral-800 p-6 mt-8"
                       >
-                        <h3 className="text-lg font-bold text-neutral-900 mb-4">
+                        <h3 className="text-lg font-bold text-white mb-4">
                           Anfrage senden
                         </h3>
                         <form
@@ -472,52 +472,52 @@ export default function KonfiguratorClient() {
                         >
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
-                              <label className="block text-sm font-medium text-neutral-700 mb-1">
+                              <label className="block text-sm font-medium text-neutral-300 mb-1">
                                 Vorname *
                               </label>
                               <input
                                 type="text"
                                 required
-                                className="w-full px-4 py-2.5 rounded-lg border border-neutral-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all"
+                                className="w-full px-4 py-2.5 rounded-lg border border-neutral-700 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all bg-neutral-800 text-white placeholder-neutral-500"
                               />
                             </div>
                             <div>
-                              <label className="block text-sm font-medium text-neutral-700 mb-1">
+                              <label className="block text-sm font-medium text-neutral-300 mb-1">
                                 Nachname *
                               </label>
                               <input
                                 type="text"
                                 required
-                                className="w-full px-4 py-2.5 rounded-lg border border-neutral-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all"
+                                className="w-full px-4 py-2.5 rounded-lg border border-neutral-700 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all bg-neutral-800 text-white placeholder-neutral-500"
                               />
                             </div>
                           </div>
                           <div>
-                            <label className="block text-sm font-medium text-neutral-700 mb-1">
+                            <label className="block text-sm font-medium text-neutral-300 mb-1">
                               E-Mail *
                             </label>
                             <input
                               type="email"
                               required
-                              className="w-full px-4 py-2.5 rounded-lg border border-neutral-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all"
+                              className="w-full px-4 py-2.5 rounded-lg border border-neutral-700 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all bg-neutral-800 text-white placeholder-neutral-500"
                             />
                           </div>
                           <div>
-                            <label className="block text-sm font-medium text-neutral-700 mb-1">
+                            <label className="block text-sm font-medium text-neutral-300 mb-1">
                               Telefon
                             </label>
                             <input
                               type="tel"
-                              className="w-full px-4 py-2.5 rounded-lg border border-neutral-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all"
+                              className="w-full px-4 py-2.5 rounded-lg border border-neutral-700 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all bg-neutral-800 text-white placeholder-neutral-500"
                             />
                           </div>
                           <div>
-                            <label className="block text-sm font-medium text-neutral-700 mb-1">
+                            <label className="block text-sm font-medium text-neutral-300 mb-1">
                               Nachricht
                             </label>
                             <textarea
                               rows={3}
-                              className="w-full px-4 py-2.5 rounded-lg border border-neutral-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all resize-none"
+                              className="w-full px-4 py-2.5 rounded-lg border border-neutral-700 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all bg-neutral-800 text-white placeholder-neutral-500 resize-none"
                               placeholder="Haben Sie besondere Wünsche oder Fragen?"
                             />
                           </div>
@@ -540,15 +540,15 @@ export default function KonfiguratorClient() {
               </AnimatePresence>
 
               {/* Navigation Buttons */}
-              <div className="flex justify-between mt-8 pt-6 border-t border-neutral-200">
+              <div className="flex justify-between mt-8 pt-6 border-t border-neutral-800">
                 <button
                   onClick={prevStep}
                   disabled={currentStep === 0}
                   className={clsx(
                     "flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all",
                     currentStep === 0
-                      ? "text-neutral-300 cursor-not-allowed"
-                      : "text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100"
+                      ? "text-neutral-700 cursor-not-allowed"
+                      : "text-neutral-400 hover:text-white hover:bg-neutral-800"
                   )}
                 >
                   <ChevronLeft className="h-4 w-4" />
@@ -562,7 +562,7 @@ export default function KonfiguratorClient() {
                       "flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all",
                       canProceed
                         ? "bg-brand-600 text-white hover:bg-brand-700 shadow-lg shadow-brand-600/25"
-                        : "bg-neutral-200 text-neutral-400 cursor-not-allowed"
+                        : "bg-neutral-800 text-neutral-500 cursor-not-allowed"
                     )}
                   >
                     Weiter
@@ -575,24 +575,24 @@ export default function KonfiguratorClient() {
             {/* Right: Price Summary (Sticky) */}
             <div className="lg:col-span-1">
               <div className="sticky top-36">
-                <div className="bg-white rounded-xl border border-neutral-200 p-6 shadow-sm">
-                  <h3 className="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">
+                <div className="bg-neutral-900 rounded-xl border border-neutral-800 p-6 shadow-sm">
+                  <h3 className="text-sm font-semibold text-neutral-400 uppercase tracking-wider mb-4">
                     Preisübersicht
                   </h3>
 
                   {selectedAircraft ? (
                     <>
-                      <div className="flex items-center gap-3 mb-6 pb-6 border-b border-neutral-100">
+                      <div className="flex items-center gap-3 mb-6 pb-6 border-b border-neutral-800">
                         <div
                           className={`w-12 h-12 rounded-lg bg-gradient-to-br ${selectedAircraft.heroColor} flex items-center justify-center`}
                         >
                           <Plane className="h-6 w-6 text-white/40" />
                         </div>
                         <div>
-                          <div className="font-bold text-neutral-900">
+                          <div className="font-bold text-white">
                             {selectedAircraft.name}
                           </div>
-                          <div className="text-xs text-neutral-500">
+                          <div className="text-xs text-neutral-400">
                             {selectedAircraft.seats} Sitze
                           </div>
                         </div>
@@ -600,28 +600,28 @@ export default function KonfiguratorClient() {
 
                       <div className="space-y-3 mb-6">
                         <div className="flex justify-between text-sm">
-                          <span className="text-neutral-500">Basispreis</span>
-                          <span className="font-medium text-neutral-900">
+                          <span className="text-neutral-400">Basispreis</span>
+                          <span className="font-medium text-white">
                             {formatPrice(selectedAircraft.basePrice)}
                           </span>
                         </div>
                         {optionsPrice > 0 && (
                           <div className="flex justify-between text-sm">
-                            <span className="text-neutral-500">Optionen</span>
-                            <span className="font-medium text-neutral-900">
+                            <span className="text-neutral-400">Optionen</span>
+                            <span className="font-medium text-white">
                               + {formatPrice(optionsPrice)}
                             </span>
                           </div>
                         )}
                       </div>
 
-                      <div className="pt-4 border-t border-neutral-200">
+                      <div className="pt-4 border-t border-neutral-800">
                         <div className="flex justify-between items-end">
-                          <span className="text-sm font-medium text-neutral-500">
+                          <span className="text-sm font-medium text-neutral-400">
                             Gesamtpreis
                           </span>
                           <div className="text-right">
-                            <div className="text-2xl font-bold text-neutral-900">
+                            <div className="text-2xl font-bold text-white">
                               {formatPrice(totalPrice)}
                             </div>
                             <span className="text-xs text-neutral-400">
@@ -633,7 +633,7 @@ export default function KonfiguratorClient() {
                     </>
                   ) : (
                     <div className="text-center py-8">
-                      <Plane className="h-12 w-12 text-neutral-200 mx-auto mb-3" />
+                      <Plane className="h-12 w-12 text-neutral-700 mx-auto mb-3" />
                       <p className="text-sm text-neutral-400">
                         Wählen Sie ein Modell um zu beginnen
                       </p>

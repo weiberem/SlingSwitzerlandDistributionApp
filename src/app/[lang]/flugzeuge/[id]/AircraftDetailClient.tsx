@@ -81,14 +81,14 @@ export default function AircraftDetailClient({
       </section>
 
       {/* Specifications */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-neutral-950">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold text-neutral-900 mb-12">
+            <h2 className="text-3xl font-bold text-white mb-12">
               Technische Daten
             </h2>
           </motion.div>
@@ -101,12 +101,12 @@ export default function AircraftDetailClient({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-neutral-50 rounded-xl p-6 border border-neutral-100"
+                className="bg-neutral-900 rounded-xl p-6 border border-neutral-800"
               >
                 <div className="text-sm text-neutral-400 mb-2">
                   {spec.label}
                 </div>
-                <div className="text-xl font-bold text-neutral-900">
+                <div className="text-xl font-bold text-white">
                   {spec.value}
                 </div>
               </motion.div>
@@ -116,7 +116,7 @@ export default function AircraftDetailClient({
       </section>
 
       {/* Features */}
-      <section className="py-24 bg-neutral-50">
+      <section className="py-24 bg-black">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -124,10 +124,10 @@ export default function AircraftDetailClient({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold text-neutral-900 mb-4">
+              <h2 className="text-3xl font-bold text-white mb-4">
                 Highlights & Features
               </h2>
-              <p className="text-neutral-500 leading-relaxed mb-8">
+              <p className="text-neutral-400 leading-relaxed mb-8">
                 Der {plane.name} überzeugt durch eine Kombination aus
                 hochwertiger Verarbeitung, modernster Technik und
                 durchdachtem Design.
@@ -138,10 +138,10 @@ export default function AircraftDetailClient({
                     key={feature}
                     className="flex items-center gap-3"
                   >
-                    <div className="w-6 h-6 rounded-full bg-brand-100 flex items-center justify-center shrink-0">
-                      <Check className="h-3.5 w-3.5 text-brand-600" />
+                    <div className="w-6 h-6 rounded-full bg-brand-600/20 flex items-center justify-center shrink-0">
+                      <Check className="h-3.5 w-3.5 text-brand-400" />
                     </div>
-                    <span className="text-neutral-700">{feature}</span>
+                    <span className="text-neutral-400">{feature}</span>
                   </div>
                 ))}
               </div>

@@ -93,7 +93,7 @@ export default function ServicePage() {
       </section>
 
       {/* Promise */}
-      <section className="py-16 bg-white border-b border-neutral-100">
+      <section className="py-16 bg-neutral-900 border-b border-neutral-800">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -121,12 +121,12 @@ export default function ServicePage() {
                 transition={{ delay: index * 0.1 }}
                 className="flex items-start gap-4"
               >
-                <div className="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center shrink-0">
-                  <item.icon className="h-6 w-6 text-brand-600" />
+                <div className="w-12 h-12 rounded-xl bg-brand-600/15 flex items-center justify-center shrink-0">
+                  <item.icon className="h-6 w-6 text-brand-500" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-neutral-900">{item.title}</h3>
-                  <p className="text-sm text-neutral-500 mt-1">{item.text}</p>
+                  <h3 className="font-bold text-white">{item.title}</h3>
+                  <p className="text-sm text-neutral-400 mt-1">{item.text}</p>
                 </div>
               </motion.div>
             ))}
@@ -135,9 +135,10 @@ export default function ServicePage() {
       </section>
 
       {/* Services */}
-      <section className="py-24 bg-neutral-50">
+      <section className="py-24 bg-neutral-950">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
+            light
             label="Unsere Leistungen"
             title="Umfassender Service"
             description="Alles aus einer Hand: Von der Wartung über Reparaturen bis zur Ersatzteilversorgung."
@@ -151,15 +152,15 @@ export default function ServicePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl p-8 border border-neutral-200 hover:shadow-lg transition-shadow duration-300"
+                className="bg-neutral-900 rounded-xl p-8 border border-neutral-800 hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-6">
-                  <service.icon className="h-6 w-6 text-brand-600" />
+                <div className="w-12 h-12 rounded-xl bg-brand-600/15 flex items-center justify-center mb-6">
+                  <service.icon className="h-6 w-6 text-brand-500" />
                 </div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-3">
+                <h3 className="text-xl font-bold text-white mb-3">
                   {service.title}
                 </h3>
-                <p className="text-neutral-500 leading-relaxed mb-6">
+                <p className="text-neutral-400 leading-relaxed mb-6">
                   {service.description}
                 </p>
                 <div className="space-y-2">
@@ -169,7 +170,7 @@ export default function ServicePage() {
                       className="flex items-center gap-2 text-sm"
                     >
                       <CheckCircle className="h-4 w-4 text-brand-500 shrink-0" />
-                      <span className="text-neutral-600">{feature}</span>
+                      <span className="text-neutral-400">{feature}</span>
                     </div>
                   ))}
                 </div>

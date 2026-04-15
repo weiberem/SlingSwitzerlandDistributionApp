@@ -39,7 +39,7 @@ export const aircraft: Aircraft[] = [
     ],
     basePrice: 195000,
     currency: "CHF",
-    heroColor: "from-sky-900 to-sky-700",
+    heroColor: "from-neutral-900 to-neutral-800",
     features: [
       "Ganzmetall-Bauweise",
       "Rotax 912 iS Einspritzmotor",
@@ -70,7 +70,7 @@ export const aircraft: Aircraft[] = [
     ],
     basePrice: 285000,
     currency: "CHF",
-    heroColor: "from-emerald-900 to-emerald-700",
+    heroColor: "from-brand-950 to-neutral-900",
     features: [
       "4 komfortable Sitzplätze",
       "Grosszügiger Gepäckraum",
@@ -101,7 +101,7 @@ export const aircraft: Aircraft[] = [
     ],
     basePrice: 345000,
     currency: "CHF",
-    heroColor: "from-slate-900 to-slate-700",
+    heroColor: "from-brand-900 to-brand-800",
     features: [
       "Rotax 915 iS Turbomotor",
       "Garmin G3X Touch Dual-Screen",
@@ -132,7 +132,7 @@ export const aircraft: Aircraft[] = [
     ],
     basePrice: 215000,
     currency: "CHF",
-    heroColor: "from-amber-900 to-amber-700",
+    heroColor: "from-neutral-800 to-brand-950",
     features: [
       "Hochdecker-Design",
       "Exzellente Sicht nach unten",

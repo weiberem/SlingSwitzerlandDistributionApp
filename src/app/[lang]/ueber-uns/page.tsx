@@ -42,7 +42,7 @@ export default function UeberUnsPage() {
       </section>
 
       {/* Story */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-neutral-950">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -51,6 +51,7 @@ export default function UeberUnsPage() {
               viewport={{ once: true }}
             >
               <SectionHeading
+                light
                 align="left"
                 label="Unsere Geschichte"
                 title="Vom Traum zur Realität"
@@ -65,7 +66,7 @@ export default function UeberUnsPage() {
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-brand-500 shrink-0 mt-0.5" />
-                    <span className="text-neutral-600">{item}</span>
+                    <span className="text-neutral-400">{item}</span>
                   </div>
                 ))}
               </div>
@@ -84,9 +85,10 @@ export default function UeberUnsPage() {
       </section>
 
       {/* Values */}
-      <section className="py-24 bg-neutral-50">
+      <section className="py-24 bg-black">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
+            light
             label="Unsere Werte"
             title="Was uns antreibt"
           />
@@ -124,15 +126,15 @@ export default function UeberUnsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl p-6 border border-neutral-200 hover:shadow-lg transition-shadow duration-300"
+                className="bg-neutral-900 rounded-xl p-6 border border-neutral-800 hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-4">
-                  <value.icon className="h-6 w-6 text-brand-600" />
+                <div className="w-12 h-12 rounded-xl bg-brand-600/15 flex items-center justify-center mb-4">
+                  <value.icon className="h-6 w-6 text-brand-500" />
                 </div>
-                <h3 className="font-bold text-neutral-900 mb-2">
+                <h3 className="font-bold text-white mb-2">
                   {value.title}
                 </h3>
-                <p className="text-sm text-neutral-500 leading-relaxed">
+                <p className="text-sm text-neutral-400 leading-relaxed">
                   {value.description}
                 </p>
               </motion.div>
@@ -195,17 +197,17 @@ export default function UeberUnsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-neutral-950">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Lernen Sie uns kennen
             </h2>
-            <p className="text-neutral-500 max-w-xl mx-auto mb-8">
+            <p className="text-neutral-400 max-w-xl mx-auto mb-8">
               Besuchen Sie uns, fliegen Sie mit uns oder rufen Sie uns einfach
               an. Wir freuen uns auf den Austausch mit Ihnen.
             </p>

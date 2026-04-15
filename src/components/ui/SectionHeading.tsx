@@ -28,7 +28,7 @@ export default function SectionHeading({
       {label && (
         <span
           className={`inline-block text-xs font-semibold uppercase tracking-[0.2em] mb-4 ${
-            light ? "text-brand-300" : "text-brand-600"
+            light ? "text-brand-400" : "text-brand-500"
           }`}
         >
           {label}
@@ -36,7 +36,7 @@ export default function SectionHeading({
       )}
       <h2
         className={`text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight ${
-          light ? "text-white" : "text-neutral-900"
+          light ? "text-white" : "text-white"
         }`}
       >
         {title}
@@ -45,7 +45,7 @@ export default function SectionHeading({
         <p
           className={`mt-4 text-lg max-w-2xl leading-relaxed ${
             align === "center" ? "mx-auto" : ""
-          } ${light ? "text-neutral-300" : "text-neutral-500"}`}
+          } ${light ? "text-neutral-300" : "text-neutral-400"}`}
         >
           {description}
         </p>
