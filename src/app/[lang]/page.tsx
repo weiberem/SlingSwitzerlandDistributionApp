@@ -16,6 +16,7 @@ import {
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import HeroVideo from "@/components/home/HeroVideo";
+import YouTubeBackground from "@/components/ui/YouTubeBackground";
 import { aircraft, formatPrice } from "@/data/aircraft";
 
 const fadeInUp = {
@@ -165,12 +166,14 @@ export default function HomePage() {
                   {/* Red top accent */}
                   <div className="h-1 bg-gradient-to-r from-brand-700 via-brand-500 to-brand-700 opacity-60 group-hover:opacity-100 transition-opacity" />
 
-                  <div
-                    className={`h-48 bg-gradient-to-br ${plane.heroColor} flex items-center justify-center relative`}
-                  >
-                    <Plane className="h-16 w-16 text-white/20 group-hover:scale-110 transition-transform duration-500" />
+                  <div className="h-48 relative overflow-hidden">
+                    <YouTubeBackground
+                      videoId={plane.video.videoId}
+                      startSeconds={plane.video.startSeconds}
+                      endSeconds={plane.video.endSeconds}
+                    />
                     {/* Transparent red overlay on hover */}
-                    <div className="absolute inset-0 bg-brand-600/0 group-hover:bg-brand-600/10 transition-colors duration-500" />
+                    <div className="absolute inset-0 bg-brand-600/0 group-hover:bg-brand-600/10 transition-colors duration-500 z-10" />
                   </div>
 
                   <div className="p-6">

@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 import {
-  Plane,
   ArrowRight,
   Check,
   ArrowLeft,
 } from "lucide-react";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
+import YouTubeBackground from "@/components/ui/YouTubeBackground";
 import { Aircraft, formatPrice } from "@/data/aircraft";
 
 export default function AircraftDetailClient({
@@ -20,10 +20,11 @@ export default function AircraftDetailClient({
     <>
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div
-          className={`absolute inset-0 bg-gradient-to-br ${plane.heroColor}`}
+        <YouTubeBackground
+          videoId={plane.video.videoId}
+          startSeconds={plane.video.startSeconds}
+          endSeconds={plane.video.endSeconds}
         />
-        <div className="absolute inset-0 bg-black/30" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Link
             href="/flugzeuge"
@@ -72,8 +73,12 @@ export default function AircraftDetailClient({
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex items-center justify-center"
             >
-              <div className="w-80 h-80 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm">
-                <Plane className="h-32 w-32 text-white/30" />
+              <div className="w-80 h-80 rounded-2xl relative overflow-hidden border border-white/10">
+                <YouTubeBackground
+                  videoId={plane.video.videoId}
+                  startSeconds={plane.video.startSeconds}
+                  endSeconds={plane.video.endSeconds}
+                />
               </div>
             </motion.div>
           </div>
@@ -151,9 +156,13 @@ export default function AircraftDetailClient({
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className={`h-80 rounded-2xl bg-gradient-to-br ${plane.heroColor} flex items-center justify-center`}
+              className="h-80 rounded-2xl relative overflow-hidden border border-neutral-800"
             >
-              <Plane className="h-24 w-24 text-white/20" />
+              <YouTubeBackground
+                videoId={plane.video.videoId}
+                startSeconds={plane.video.startSeconds}
+                endSeconds={plane.video.endSeconds}
+              />
             </motion.div>
           </div>
         </div>

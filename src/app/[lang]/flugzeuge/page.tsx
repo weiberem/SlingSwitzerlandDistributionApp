@@ -2,9 +2,10 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Plane, Users, Clock, ChevronRight, ArrowRight } from "lucide-react";
+import { Users, Clock, ChevronRight, ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
+import YouTubeBackground from "@/components/ui/YouTubeBackground";
 import { aircraft, formatPrice } from "@/data/aircraft";
 
 export default function FlugzeugePage() {
@@ -50,10 +51,12 @@ export default function FlugzeugePage() {
                   className="group block bg-neutral-900 rounded-2xl border border-neutral-800 overflow-hidden hover:border-brand-600/50 hover:shadow-xl hover:shadow-brand-500/5 transition-all duration-500"
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-5">
-                    <div
-                      className={`lg:col-span-2 h-64 lg:h-auto bg-gradient-to-br ${plane.heroColor} flex items-center justify-center`}
-                    >
-                      <Plane className="h-20 w-20 text-white/30 group-hover:scale-110 transition-transform duration-500" />
+                    <div className="lg:col-span-2 h-64 lg:h-auto relative overflow-hidden min-h-[200px]">
+                      <YouTubeBackground
+                        videoId={plane.video.videoId}
+                        startSeconds={plane.video.startSeconds}
+                        endSeconds={plane.video.endSeconds}
+                      />
                     </div>
 
                     <div className="lg:col-span-3 p-8 lg:p-10">

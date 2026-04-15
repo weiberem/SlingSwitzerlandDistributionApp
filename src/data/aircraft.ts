@@ -3,6 +3,12 @@ export interface AircraftSpec {
   value: string;
 }
 
+export interface AircraftVideo {
+  videoId: string;
+  startSeconds: number;
+  endSeconds: number;
+}
+
 export interface Aircraft {
   id: string;
   name: string;
@@ -15,6 +21,7 @@ export interface Aircraft {
   currency: string;
   heroColor: string;
   features: string[];
+  video: AircraftVideo;
 }
 
 export const aircraft: Aircraft[] = [
@@ -40,6 +47,7 @@ export const aircraft: Aircraft[] = [
     basePrice: 195000,
     currency: "CHF",
     heroColor: "from-neutral-900 to-neutral-800",
+    video: { videoId: "LbO28tBc1hU", startSeconds: 7, endSeconds: 20 },
     features: [
       "Ganzmetall-Bauweise",
       "Rotax 912 iS Einspritzmotor",
@@ -71,6 +79,7 @@ export const aircraft: Aircraft[] = [
     basePrice: 285000,
     currency: "CHF",
     heroColor: "from-brand-950 to-neutral-900",
+    video: { videoId: "LbO28tBc1hU", startSeconds: 20, endSeconds: 35 },
     features: [
       "4 komfortable Sitzplätze",
       "Grosszügiger Gepäckraum",
@@ -102,6 +111,7 @@ export const aircraft: Aircraft[] = [
     basePrice: 345000,
     currency: "CHF",
     heroColor: "from-brand-900 to-brand-800",
+    video: { videoId: "LbO28tBc1hU", startSeconds: 35, endSeconds: 50 },
     features: [
       "Rotax 915 iS Turbomotor",
       "Garmin G3X Touch Dual-Screen",
@@ -133,6 +143,7 @@ export const aircraft: Aircraft[] = [
     basePrice: 215000,
     currency: "CHF",
     heroColor: "from-neutral-800 to-brand-950",
+    video: { videoId: "LbO28tBc1hU", startSeconds: 50, endSeconds: 65 },
     features: [
       "Hochdecker-Design",
       "Exzellente Sicht nach unten",
