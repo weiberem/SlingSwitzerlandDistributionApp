@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Plane, Mail, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
+import { Mail, Phone, MapPin } from "lucide-react";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 
@@ -43,18 +44,14 @@ export default function Footer({
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-16 border-b border-neutral-800">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href={`/${lang}`} className="flex items-center gap-3 mb-6">
-              <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-600 text-white">
-                <Plane className="h-5 w-5" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg font-bold text-white tracking-tight leading-tight">
-                  Sling Switzerland
-                </span>
-                <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-brand-500">
-                  {dict.nav.dealer}
-                </span>
-              </div>
+            <Link href={`/${lang}`} className="inline-block mb-6">
+              <Image
+                src="/logos/SlingSwitzerlandLogo.jpg"
+                alt="Sling Aircraft Switzerland"
+                width={180}
+                height={60}
+                className="h-14 w-auto object-contain"
+              />
             </Link>
             <p className="text-sm leading-relaxed mb-6">
               {dict.footer.description}
