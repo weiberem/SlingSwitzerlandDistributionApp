@@ -7,9 +7,13 @@ import {
   Plane,
   Paintbrush,
   Gauge,
-  Armchair,
   Shield,
   Zap,
+  Wind,
+  Disc,
+  Fuel,
+  Hammer,
+  Wrench,
   Check,
   ChevronRight,
   ChevronLeft,
@@ -25,9 +29,13 @@ import { clsx } from "clsx";
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Paintbrush,
   Gauge,
-  Armchair,
   Shield,
   Zap,
+  Wind,
+  Disc,
+  Fuel,
+  Hammer,
+  Wrench,
 };
 
 const steps = [
@@ -304,17 +312,8 @@ export default function KonfiguratorClient() {
                                     </p>
                                   </div>
                                   <div className="text-right ml-4">
-                                    <span
-                                      className={clsx(
-                                        "text-sm font-semibold",
-                                        option.price === 0
-                                          ? "text-green-400"
-                                          : "text-neutral-400"
-                                      )}
-                                    >
-                                      {option.price === 0
-                                        ? "Inklusive"
-                                        : "Aufpreis"}
+                                    <span className="text-sm font-semibold text-neutral-500">
+                                      {option.poa ? "Auf Anfrage" : "Option"}
                                     </span>
                                   </div>
                                 </div>
@@ -400,10 +399,8 @@ export default function KonfiguratorClient() {
                                     {opt.name}
                                   </span>
                                 </div>
-                                <span className="text-sm font-medium text-white">
-                                  {opt.price === 0
-                                    ? "Inkl."
-                                    : "Aufpreis"}
+                                <span className="text-sm font-medium text-neutral-500">
+                                  {opt.poa ? "Auf Anfrage" : ""}
                                 </span>
                               </div>
                             ))}
