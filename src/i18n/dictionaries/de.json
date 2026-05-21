@@ -147,15 +147,15 @@
       { "step": "7", "title": "Verkehrszulassung & Abheben!", "desc": "BAZL erteilt die Zulassung. Dein Flugzeug ist eingetragen – und du hebst ab! Willkommen in der Sling-Familie." }
     ],
     "exampleBuildGuides": "Beispiel-Bauanleitungen ansehen",
-    "advantagesTitle": "Vorteile Eigenbau",
+    "advantagesTitle": "Vorteile des Eigenbaus",
     "advantages": [
-      "Mehr Freiheit bei der Konfiguration",
-      "Bewährtes Kit – proven design",
-      "Projekt mit Kollegen möglich",
-      "Rotax – kein Avgas nötig",
-      "Optionales BRS Rettungssystem",
-      "Long Range Tanks & O₂ nach Wunsch",
-      "Schleppkupplung bei allen Modellen möglich"
+      "Vollständig individualisierbare Konfiguration nach persönlichen Anforderungen",
+      "Hundertfach bewährtes Kit – weltweit erprobtes und ausgereiftes Design",
+      "Realisierung im Team oder mit professioneller Baubegleitung möglich",
+      "Wirtschaftlicher Rotax-Antrieb – Betrieb mit Mogas oder UL91, kein Avgas erforderlich",
+      "Optionales BRS-Gesamtrettungssystem für maximale Sicherheitsreserve",
+      "Long-Range-Tanks und Sauerstoffanlage als individuelle Ausstattungsoption",
+      "Schleppkupplung für sämtliche Modelle verfügbar"
     ],
     "easTitle": "EAS – Experimental Aviation of Switzerland",
     "easDescription": "Seit 1963 begleitet die EAS rund 500 Mitglieder beim Eigenbau. Ca. 130 fliegende und 120 weitere Flugzeuge im Bau.",
