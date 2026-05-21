@@ -296,11 +296,11 @@ export default function HomePage() {
               </h2>
               <p className="mt-4 text-neutral-400 leading-relaxed">
                 In der Schweiz fallen Sling Flugzeuge in die <strong className="text-white">Sonderkategorie
-                «Experimental»</strong> (Homebuilt). Sie werden als Kit nach der
-                Eigenbau-Regel (51%) gebaut und unter Aufsicht des BAZL
-                (Bundesamt für Zivilluftfahrt) zugelassen. Die EAS begleitet
-                den gesamten Prozess – von der Projektbeurteilung bis zur
-                Verkehrszulassung.
+                «Experimental»</strong> – das Schweizer Äquivalent zur internationalen
+                Homebuilt-Kategorie. Sie werden als Kit nach der Eigenbau-Regel
+                (51%) gebaut und unter Aufsicht des BAZL (Bundesamt für
+                Zivilluftfahrt) zugelassen. Die EAS begleitet den gesamten
+                Prozess – von der Projektbeurteilung bis zur Verkehrszulassung.
               </p>
               <p className="mt-4 text-neutral-400 leading-relaxed">
                 <strong className="text-white">Brauchen Sie Unterstützung beim Bau?</strong>{" "}
