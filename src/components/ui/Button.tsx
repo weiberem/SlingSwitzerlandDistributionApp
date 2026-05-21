@@ -4,7 +4,7 @@ import { clsx } from "clsx";
 interface ButtonProps {
   href?: string;
   external?: boolean;
-  variant?: "primary" | "secondary" | "outline" | "ghost";
+  variant?: "primary" | "secondary" | "outline" | "ghost" | "white";
   size?: "sm" | "md" | "lg";
   children: React.ReactNode;
   className?: string;
@@ -21,6 +21,8 @@ const variants = {
   outline:
     "border-2 border-neutral-600 text-white hover:border-brand-500 hover:text-brand-400",
   ghost: "text-neutral-400 hover:text-white hover:bg-white/5",
+  white:
+    "bg-white text-brand-700 hover:bg-neutral-100 shadow-xl shadow-black/30",
 };
 
 const sizes = {

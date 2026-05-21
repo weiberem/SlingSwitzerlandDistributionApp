@@ -203,10 +203,12 @@ export default function HomeClient({
 
                       <div className="mt-6 flex flex-wrap gap-3">
                         <a
-                          href="#kontakt"
+                          href="https://slingaircraftconfig.app"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-600 text-white text-sm font-semibold rounded-lg hover:bg-brand-500 shadow-lg shadow-brand-600/20 transition-all"
                         >
-                          {t.sendInquiry}
+                          {t.configureNow}
                           <ArrowRight className="h-4 w-4" />
                         </a>
                         <a
@@ -447,8 +449,8 @@ export default function HomeClient({
               <Button
                 href="https://slingaircraftconfig.app"
                 external
+                variant="white"
                 size="lg"
-                className="bg-white text-brand-700 hover:bg-neutral-100 shadow-xl shadow-black/30"
               >
                 {t.configuratorCta}
                 <ArrowRight className="ml-2 h-5 w-5" />
