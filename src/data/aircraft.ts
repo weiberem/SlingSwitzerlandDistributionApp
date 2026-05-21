@@ -104,6 +104,7 @@ export const aircraft: Aircraft[] = [
     heroColor: "from-neutral-800 to-brand-950",
     video: { videoId: "LbO28tBc1hU", startSeconds: 40, endSeconds: 55 },
     externalUrl: "https://slingaircraft.com/aircraft/sling-hw/",
+    image: "/images/aircraft/sling-hw/sling-hw-001.jpeg.webp",
     features: [
       "Rotax 916iS Turbomotor (160 PS)",
       "Carbon-Composite-Rumpfmittelteil",
@@ -145,6 +146,7 @@ export const aircraft: Aircraft[] = [
     heroColor: "from-neutral-900 to-neutral-800",
     video: { videoId: "LbO28tBc1hU", startSeconds: 7, endSeconds: 20 },
     externalUrl: "https://slingaircraft.com/aircraft/sling-2/",
+    image: "/images/aircraft/sling-2/Bildschirmfoto 2026-05-21 um 11.10.26.png",
     features: [
       "Ganzmetall-Bauweise (Aluminium)",
       "Rotax 912iS Einspritzmotor (100 PS)",
