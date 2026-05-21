@@ -200,10 +200,10 @@ export default function HomeClient({
                         ))}
                       </div>
 
-                      <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3">
+                      <div className="mt-6 flex flex-wrap gap-3">
                         <a
                           href="#kontakt"
-                          className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-600 text-white text-sm font-semibold rounded-lg hover:bg-brand-500 transition-colors"
+                          className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-600 text-white text-sm font-semibold rounded-lg hover:bg-brand-500 shadow-lg shadow-brand-600/20 transition-all"
                         >
                           {t.sendInquiry}
                           <ArrowRight className="h-4 w-4" />
@@ -212,7 +212,7 @@ export default function HomeClient({
                           href={plane.externalUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center text-sm font-medium text-neutral-400 hover:text-brand-400 gap-2 transition-all"
+                          className="inline-flex items-center gap-2 px-5 py-2.5 border border-neutral-700 bg-neutral-800/40 text-white text-sm font-semibold rounded-lg hover:border-brand-500 hover:bg-neutral-800 hover:text-brand-400 transition-all"
                         >
                           {t.details}
                           <ChevronRight className="h-4 w-4" />
@@ -221,7 +221,7 @@ export default function HomeClient({
                           href="https://slingaircraft.com/technical-documents/aircraft-manuals/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center text-sm font-medium text-neutral-400 hover:text-white gap-2 transition-all"
+                          className="inline-flex items-center gap-2 px-5 py-2.5 border border-neutral-700 bg-neutral-800/40 text-white text-sm font-semibold rounded-lg hover:border-brand-500 hover:bg-neutral-800 hover:text-brand-400 transition-all"
                         >
                           {t.manuals}
                           <ChevronRight className="h-4 w-4" />
@@ -230,7 +230,7 @@ export default function HomeClient({
                           href="https://slingaircraft.com/aircraft/sling-kits/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center text-sm font-medium text-neutral-400 hover:text-brand-400 gap-2 transition-all"
+                          className="inline-flex items-center gap-2 px-5 py-2.5 border border-neutral-700 bg-neutral-800/40 text-white text-sm font-semibold rounded-lg hover:border-brand-500 hover:bg-neutral-800 hover:text-brand-400 transition-all"
                         >
                           {t.buildGuide}
                           <ChevronRight className="h-4 w-4" />
