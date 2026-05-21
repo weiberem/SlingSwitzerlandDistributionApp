@@ -204,7 +204,7 @@ export default function HomePage() {
                         ))}
                       </div>
 
-                      <div className="mt-6 flex flex-wrap gap-4">
+                      <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3">
                         <a
                           href={plane.externalUrl}
                           target="_blank"
@@ -221,6 +221,15 @@ export default function HomePage() {
                           className="inline-flex items-center text-sm font-medium text-neutral-400 hover:text-white gap-2 transition-all"
                         >
                           Aircraft Manuals
+                          <ChevronRight className="h-4 w-4" />
+                        </a>
+                        <a
+                          href={`https://www.youtube.com/watch?v=${plane.video.videoId}&t=${plane.video.startSeconds}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center text-sm font-medium text-neutral-400 hover:text-brand-400 gap-2 transition-all"
+                        >
+                          Video ansehen
                           <ChevronRight className="h-4 w-4" />
                         </a>
                       </div>
