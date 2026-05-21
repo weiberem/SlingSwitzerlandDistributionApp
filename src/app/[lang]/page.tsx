@@ -224,6 +224,15 @@ export default function HomePage() {
                           <ChevronRight className="h-4 w-4" />
                         </a>
                         <a
+                          href="https://slingaircraft.com/aircraft/sling-kits/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center text-sm font-medium text-neutral-400 hover:text-brand-400 gap-2 transition-all"
+                        >
+                          Bauanleitung ansehen
+                          <ChevronRight className="h-4 w-4" />
+                        </a>
+                        <a
                           href={`https://www.youtube.com/watch?v=${plane.video.videoId}&t=${plane.video.startSeconds}`}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -358,17 +367,21 @@ export default function HomePage() {
               {/* Projekt-Ablauf */}
               <div className="bg-neutral-900 rounded-2xl p-8 border border-neutral-800">
                 <div className="h-1 bg-brand-600 rounded-full mb-6" />
-                <h3 className="text-lg font-bold text-white mb-6">
+                <h3 className="text-lg font-bold text-white mb-2">
                   Ihr Sling Projekt in der Schweiz
                 </h3>
-                <div className="space-y-5">
+                <p className="text-xs text-neutral-400 mb-6">
+                  Ein bewährtes Kit-Flugzeug – hundertfach gebaut, proven design. Ihr Boost fürs Fliegerabenteuer.
+                </p>
+                <div className="space-y-6">
                   {[
-                    { step: "1", title: "Beratung & Modellwahl", desc: "Wir beraten Sie persönlich und finden das passende Modell für Ihre Bedürfnisse." },
-                    { step: "2", title: "EAS-Mitgliedschaft & Projektanmeldung", desc: "Anmeldung bei der EAS – Ihr Projekt wird von Ingenieuren beurteilt und freigegeben." },
-                    { step: "3", title: "Kit bestellen & liefern", desc: "Bestellung ab Werk in Südafrika. Lieferung frei Haus in die Schweiz in 14–20 Tagen." },
-                    { step: "4", title: "Bauen – mit Unterstützung", desc: "Sie bauen Ihr Flugzeug selbst (51%-Regel). Wir und die EAS stehen Ihnen jederzeit zur Seite." },
-                    { step: "5", title: "Abnahme & Flugversuche", desc: "EAS-Techniker kontrollieren den Bau, begleiten die Flugversuche und nehmen das Flugzeug ab." },
-                    { step: "6", title: "Verkehrszulassung & Fliegen", desc: "BAZL erteilt die Zulassung. Ihr Flugzeug ist eingetragen und Sie heben ab!" },
+                    { step: "1", title: "Beratung & Modellwahl", desc: "Persönliche Beratung – wir finden gemeinsam das passende Modell für Ihre Bedürfnisse und Ziele." },
+                    { step: "2", title: "Vorbereitung & EAS-Anmeldung", desc: "EAS-Mitgliedschaft und Projektanmeldung. Ingenieur-Beurteilung und Freigabe. Den idealen Bauplatz vorbereiten – keine Angst, viele Sling wurden in ganz normalen Garagen gebaut!" },
+                    { step: "3", title: "Kit bestellen & liefern", desc: "Bestellung ab Werk in Südafrika. Door-to-door Lieferung in 14–20 Tagen kann von uns organisiert werden. Sie können auch Teilbereiche separat bestellen (Empennage, Flügel, Rumpf, Canopy, Finishing Kit) – so nutzen Sie Ihren Platz optimal." },
+                    { step: "4", title: "Bauen – mit voller Unterstützung", desc: "Sie bauen Ihr Flugzeug selbst (51%-Regel). Ein EAS-Bauberater wird Ihnen zugewiesen. Brauchen Sie mehr Hilfe? Verschiedene Dienstleistungen verfügbar in Absprache mit EAS/BAZL. Detaillierte Bauanleitungen und Videos zu jedem Schritt. Passende Werkzeuge und Zubehör beraten wir gerne." },
+                    { step: "5", title: "Schulung während dem Bau", desc: "Tageskurse organisiert durch die EAS – einige freiwillig je nach Vorkenntnissen, einige Pflicht (z.B. wenn Sie das Flugzeug selbst warten möchten). So sind Sie bestens vorbereitet." },
+                    { step: "6", title: "Abnahme & Flugversuche", desc: "Koordiniert durch EAS und BAZL. Saubere Abnahmeprozedur für den sicheren Betrieb Ihres Flugzeugs." },
+                    { step: "7", title: "Verkehrszulassung & Abheben!", desc: "BAZL erteilt die Zulassung. Ihr Flugzeug ist eingetragen – und Sie heben ab! Willkommen in der Sling-Familie." },
                   ].map((item) => (
                     <div key={item.step} className="flex gap-4">
                       <div className="w-8 h-8 rounded-full bg-brand-600 flex items-center justify-center shrink-0 text-sm font-bold text-white">
@@ -376,8 +389,43 @@ export default function HomePage() {
                       </div>
                       <div>
                         <h4 className="font-semibold text-white text-sm">{item.title}</h4>
-                        <p className="text-xs text-neutral-400 mt-0.5">{item.desc}</p>
+                        <p className="text-xs text-neutral-400 mt-0.5 leading-relaxed">{item.desc}</p>
                       </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bauanleitung Link */}
+                <div className="mt-8 pt-6 border-t border-neutral-800">
+                  <a
+                    href="https://slingaircraft.com/aircraft/sling-kits/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-brand-500 hover:text-brand-400 transition-all"
+                  >
+                    Beispiel-Bauanleitungen ansehen
+                    <ChevronRight className="h-4 w-4" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Vorteile Eigenbau */}
+              <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+                <h4 className="font-semibold text-white text-sm mb-3">
+                  Vorteile Eigenbau
+                </h4>
+                <div className="space-y-2">
+                  {[
+                    "Mehr Freiheit – Konfiguration ganz nach Ihren Wünschen",
+                    "Bewährtes Kit – hundertfach gebaut, proven design",
+                    "Projekt mit Kollegen oder als Haltergemeinschaft möglich",
+                    "Rotax-Motoren – kein Avgas nötig (Mogas/UL91 kompatibel)",
+                    "Optionales BRS Rettungssystem (ballistischer Fallschirm)",
+                    "Long Range Tanks & O₂-Systeme nach Wunsch",
+                  ].map((item) => (
+                    <div key={item} className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 shrink-0" />
+                      <span className="text-xs text-neutral-300">{item}</span>
                     </div>
                   ))}
                 </div>
