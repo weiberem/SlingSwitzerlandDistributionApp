@@ -438,6 +438,110 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Partners */}
+      <section className="py-24 lg:py-32 bg-black">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            label="Unsere Partner"
+            title="Starkes Netzwerk für Ihr Projekt"
+            description="Sling Aircraft Switzerland arbeitet mit erfahrenen Spezialisten zusammen, damit Ihr Projekt von A bis Z professionell betreut ist."
+          />
+
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Evolaris Aviation */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-neutral-900 rounded-2xl p-8 border border-neutral-800 hover:border-brand-600/40 transition-all duration-500"
+            >
+              <div className="h-1 bg-brand-600 rounded-full mb-6" />
+              <h3 className="text-xl font-bold text-white mb-2">
+                Evolaris Aviation
+              </h3>
+              <p className="text-sm text-brand-500 font-medium mb-4">
+                Offizielle AMO für Sling Aircraft Switzerland
+              </p>
+              <p className="text-sm text-neutral-400 leading-relaxed mb-4">
+                Evolaris Aviation ist unsere offizielle Unterhaltorganisation
+                (AMO) und unterstützt bei der Wartung, Instandhaltung und
+                Inbetriebnahme von Rotax-Motoren. Auch Erbauer, die ihr
+                Flugzeug nach Fertigstellung nicht selbst warten möchten,
+                sind bei Evolaris bestens aufgehoben.
+              </p>
+              <div className="space-y-2 mb-6">
+                {[
+                  "Rotax-Motorenwartung & Inbetriebnahme",
+                  "Jährliche Inspektionen & Kontrollen",
+                  "Wartung für Eigenbau-Flugzeuge",
+                  "Offizielle AMO-Zertifizierung",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 shrink-0" />
+                    <span className="text-xs text-neutral-300">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <a
+                href="https://evolaris-aviation.ch"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-brand-500 hover:text-brand-400 transition-all"
+              >
+                evolaris-aviation.ch
+                <ChevronRight className="h-4 w-4" />
+              </a>
+            </motion.div>
+
+            {/* Midwest Panel */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-neutral-900 rounded-2xl p-8 border border-neutral-800 hover:border-brand-600/40 transition-all duration-500"
+            >
+              <div className="h-1 bg-brand-600 rounded-full mb-6" />
+              <h3 className="text-xl font-bold text-white mb-2">
+                Midwest Panel
+              </h3>
+              <p className="text-sm text-brand-500 font-medium mb-4">
+                Avionik-Spezialist für Sling Aircraft
+              </p>
+              <p className="text-sm text-neutral-400 leading-relaxed mb-4">
+                Midwest Panel verfügt über die umfangreichste Erfahrung mit
+                Avionik-Setups für Sling Flugzeuge weltweit. Sie bieten
+                komplette Avionik-Suiten inklusive vorgefertigtem Kabelbaum,
+                Panel und allen Komponenten – abgestimmt auf Ihr Sling-Modell
+                und sofort einbaubereit.
+              </p>
+              <div className="space-y-2 mb-6">
+                {[
+                  "Komplette Garmin Avionik-Suiten für Sling",
+                  "Vorgefertigte Kabelbäume (Plug & Play)",
+                  "Custom Panel-Fertigung",
+                  "Grösste Sling-Avionik-Erfahrung weltweit",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 shrink-0" />
+                    <span className="text-xs text-neutral-300">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <a
+                href="https://midwestpanel.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-brand-500 hover:text-brand-400 transition-all"
+              >
+                midwestpanel.com
+                <ChevronRight className="h-4 w-4" />
+              </a>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Teaser */}
       <section id="kontakt" className="py-24 lg:py-32 bg-neutral-950 scroll-mt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
