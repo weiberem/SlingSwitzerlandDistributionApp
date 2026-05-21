@@ -47,7 +47,9 @@ export default function FlugzeugePage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <Link
-                  href={`/flugzeuge/${plane.id}`}
+                  href={plane.externalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group block bg-neutral-900 rounded-2xl border border-neutral-800 overflow-hidden hover:border-brand-600/50 hover:shadow-xl hover:shadow-brand-500/5 transition-all duration-500"
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-5">
@@ -104,7 +106,7 @@ export default function FlugzeugePage() {
                           </span>
                         </div>
                         <span className="flex items-center text-sm font-semibold text-brand-500 group-hover:gap-3 gap-2 transition-all">
-                          Mehr erfahren
+                          Detaillierte Informationen
                           <ChevronRight className="h-4 w-4" />
                         </span>
                       </div>

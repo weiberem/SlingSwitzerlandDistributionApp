@@ -20,12 +20,13 @@ export interface Aircraft {
   heroColor: string;
   features: string[];
   video: AircraftVideo;
+  externalUrl: string;
 }
 
 export const aircraft: Aircraft[] = [
   {
     id: "sling-2",
-    name: "Sling 2 / LSA",
+    name: "Sling 2",
     tagline: "2-Seat Trainer & Touring Aircraft",
     description:
       "Zweisitziger Tiefdecker mit Rotax 912iS. Ideal als Trainingsflugzeug, für Reisen zu zweit und den Einstieg in die Fliegerei.",
@@ -39,11 +40,12 @@ export const aircraft: Aircraft[] = [
       { label: "Kraftstoff", value: "120 L (Standard)" },
       { label: "Spannweite", value: "9.5 m" },
       { label: "Länge", value: "6.6 m" },
-      { label: "MTOW", value: "600 kg (LSA)" },
+      { label: "MTOW", value: "600 kg" },
       { label: "Zulassung CH", value: "Eigenbau (51%-Regel)" },
     ],
     heroColor: "from-neutral-900 to-neutral-800",
     video: { videoId: "LbO28tBc1hU", startSeconds: 7, endSeconds: 20 },
+    externalUrl: "https://slingaircraft.com/aircraft/sling-2/",
     features: [
       "Ganzmetall-Bauweise (Aluminium)",
       "Rotax 912iS Einspritzmotor (100 PS)",
@@ -76,6 +78,7 @@ export const aircraft: Aircraft[] = [
     ],
     heroColor: "from-brand-900 to-brand-800",
     video: { videoId: "LbO28tBc1hU", startSeconds: 20, endSeconds: 40 },
+    externalUrl: "https://slingaircraft.com/aircraft/sling-tsi/",
     features: [
       "Rotax 916iS Turbomotor (160 PS)",
       "Garmin G3X Touch Dual-Screen + G5 Backup",
@@ -108,6 +111,7 @@ export const aircraft: Aircraft[] = [
     ],
     heroColor: "from-neutral-800 to-brand-950",
     video: { videoId: "LbO28tBc1hU", startSeconds: 40, endSeconds: 55 },
+    externalUrl: "https://slingaircraft.com/aircraft/sling-hw/",
     features: [
       "Rotax 916iS Turbomotor (160 PS)",
       "Carbon-Composite-Rumpfmittelteil",

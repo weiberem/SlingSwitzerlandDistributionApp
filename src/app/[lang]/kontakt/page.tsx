@@ -171,7 +171,7 @@ export default function KontaktPage() {
                           defaultValue=""
                         >
                           <option value="">Kein bestimmtes Modell</option>
-                          <option value="sling-2">Sling 2 / LSA</option>
+                          <option value="sling-2">Sling 2</option>
                           <option value="sling-tsi">Sling TSi</option>
                           <option value="sling-high-wing">Sling High Wing</option>
                         </select>

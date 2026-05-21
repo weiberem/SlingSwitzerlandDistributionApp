@@ -160,7 +160,9 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <Link
-                  href={`/flugzeuge/${plane.id}`}
+                  href={plane.externalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group block relative overflow-hidden rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-brand-600/50 transition-all duration-500 hover:shadow-xl hover:shadow-brand-600/10"
                 >
                   {/* Red top accent */}
@@ -206,7 +208,7 @@ export default function HomePage() {
                     </div>
 
                     <div className="mt-4 flex items-center text-sm font-medium text-brand-500 group-hover:gap-3 gap-2 transition-all">
-                      Details ansehen
+                      Detaillierte Informationen
                       <ChevronRight className="h-4 w-4" />
                     </div>
                   </div>
