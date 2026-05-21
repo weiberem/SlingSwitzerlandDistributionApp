@@ -735,16 +735,26 @@ export default function HomeClient({
                     {tc.contactData}
                   </h3>
                   <div className="space-y-4">
-                    <div className="flex items-center gap-3 text-neutral-400">
+                    <div className="flex items-start gap-3 text-neutral-400">
                       <div className="w-10 h-10 rounded-lg bg-brand-600/15 flex items-center justify-center shrink-0">
                         <MapPin className="h-5 w-5 text-brand-500" />
                       </div>
-                      <div>
-                        <div className="text-xs text-neutral-400">
-                          {t.address}
+                      <div className="space-y-2">
+                        <div>
+                          <div className="text-xs text-neutral-400">
+                            {t.airfield} LSZW
+                          </div>
+                          <div className="font-medium text-neutral-200">
+                            Flugplatzstrasse, 3603 Thun
+                          </div>
                         </div>
-                        <div className="font-medium">
-                          Flugplatzstrasse, 3603 Thun
+                        <div>
+                          <div className="text-xs text-neutral-400">
+                            {t.airfield} Zweisimmen
+                          </div>
+                          <div className="font-medium text-neutral-200">
+                            Hangar 7, 3770 Zweisimmen
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -764,19 +774,6 @@ export default function HomeClient({
                         </div>
                       </div>
                     </a>
-                    <div className="flex items-center gap-3 text-neutral-400">
-                      <div className="w-10 h-10 rounded-lg bg-brand-600/15 flex items-center justify-center shrink-0">
-                        <MapPin className="h-5 w-5 text-brand-500" />
-                      </div>
-                      <div>
-                        <div className="text-xs text-neutral-400">
-                          {t.locations}
-                        </div>
-                        <div className="font-medium">
-                          Flugplatzstrasse Thun & Hangar 7 Zweisimmen
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
 

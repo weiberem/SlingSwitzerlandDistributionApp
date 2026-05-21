@@ -166,7 +166,7 @@
     "configuratorLabel": "Online Konfigurator",
     "configuratorTitle": "Stelle deinen Sling zusammen",
     "configuratorDescription": "Wähle dein Modell, die Avionik und Ausstattung im Online-Konfigurator. In wenigen Schritten zur Wunschkonfiguration – wir beraten dich anschliessend gerne persönlich.",
-    "configuratorCta": "Konfiguriere deinen Sling",
+    "configuratorCta": "Konfigurator starten",
     "partnersLabel": "Unsere Partner",
     "partnersTitle": "Starkes Netzwerk für dein Projekt",
     "partnersDescription": "Sling Aircraft Switzerland arbeitet mit erfahrenen Spezialisten zusammen, damit dein Projekt von A bis Z professionell betreut ist.",
@@ -193,6 +193,7 @@
     "noSpecificModel": "Kein bestimmtes Modell",
     "address": "Adresse",
     "locations": "Standorte",
+    "airfield": "Flugplatz",
     "bookTestflightDesc": "Erlebe Sling Aircraft aus erster Hand. Vereinbare einen unverbindlichen Probeflug."
   },
   "konfigurator": {
