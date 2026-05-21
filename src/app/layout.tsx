@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "Eigenbau Flugzeug Schweiz",
   ],
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
   authors: [{ name: "Sling Aircraft Switzerland" }],
