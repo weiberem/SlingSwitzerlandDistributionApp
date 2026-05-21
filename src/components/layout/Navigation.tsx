@@ -63,7 +63,7 @@ export default function Navigation({
           "absolute left-0 right-0 top-0 transition-all duration-500",
           isScrolled
             ? "h-full bg-black/95 backdrop-blur-md shadow-lg shadow-black/30 border-b border-brand-600/30"
-            : "h-[200%] bg-gradient-to-b from-black via-black/60 to-transparent"
+            : "h-[220%] bg-gradient-to-b from-black via-black to-transparent"
         )}
       />
 

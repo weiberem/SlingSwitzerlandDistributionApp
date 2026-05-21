@@ -47,7 +47,7 @@ export default function HomeClient({
       {/* Hero Section */}
       <section
         id="hero"
-        className="relative min-h-screen flex items-center overflow-hidden"
+        className="relative min-h-screen flex flex-col overflow-hidden"
       >
         <HeroVideo />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(196,20,24,0.12)_0%,_transparent_60%)]" />
@@ -58,34 +58,41 @@ export default function HomeClient({
           <div className="absolute -top-20 right-20 w-[3px] h-[120%] bg-brand-600/30 rotate-12 transform origin-top-right" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 lg:pt-28 pb-32 lg:pb-40">
-          <div className="max-w-4xl">
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight leading-[1.05]"
-            >
-              Dream. Build. <span className="text-brand-500">Fly.</span>
-            </motion.h1>
+        {/* Top: Title + Badge */}
+        <div className="relative mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8 pt-32 lg:pt-36">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight leading-[1.05] max-w-4xl"
+          >
+            Dream. Build. <span className="text-brand-500">Fly.</span>
+          </motion.h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-6"
-            >
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-600/15 border border-brand-600/30 text-sm text-brand-400">
-                <Star className="h-4 w-4 text-brand-500" />
-                {t.heroBadge}
-              </span>
-            </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-5"
+          >
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-600/15 border border-brand-600/30 text-sm text-brand-400 backdrop-blur-sm">
+              <Star className="h-4 w-4 text-brand-500" />
+              {t.heroBadge}
+            </span>
+          </motion.div>
+        </div>
 
+        {/* Spacer keeps middle of hero free for the video */}
+        <div className="flex-1" />
+
+        {/* Bottom: short tagline + CTAs */}
+        <div className="relative mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8 pb-16 lg:pb-20">
+          <div className="max-w-3xl">
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.55 }}
-              className="mt-8 text-lg sm:text-xl text-neutral-300 max-w-2xl leading-relaxed"
+              className="text-base sm:text-lg text-neutral-200 max-w-2xl leading-relaxed"
             >
               {t.heroDescription}
             </motion.p>
@@ -94,7 +101,7 @@ export default function HomeClient({
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.75 }}
-              className="mt-10 flex flex-col sm:flex-row gap-4"
+              className="mt-8 flex flex-col sm:flex-row gap-4"
             >
               <Button href="#kontakt" size="lg">
                 {t.heroCtaPrimary}
@@ -161,15 +168,6 @@ export default function HomeClient({
                         priority={index === 0}
                       />
                       <div className="absolute inset-0 bg-brand-600/0 group-hover:bg-brand-600/10 transition-colors duration-500 z-10" />
-                      <a
-                        href={`https://www.youtube.com/watch?v=${plane.video.videoId}&t=${plane.video.startSeconds}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="absolute bottom-4 left-4 z-20 inline-flex items-center gap-2 px-4 py-2 bg-black/60 backdrop-blur-sm text-sm font-medium text-white hover:bg-brand-600/80 rounded-lg transition-all border border-white/10 hover:border-brand-500"
-                      >
-                        {t.watchVideo}
-                        <ChevronRight className="h-4 w-4" />
-                      </a>
                     </div>
 
                     {/* Content right */}
@@ -774,7 +772,7 @@ export default function HomeClient({
                           {t.locations}
                         </div>
                         <div className="font-medium">
-                          Thun Airport & Zweisimmen
+                          Flugplatzstrasse Thun & Hangar 7 Zweisimmen
                         </div>
                       </div>
                     </div>
