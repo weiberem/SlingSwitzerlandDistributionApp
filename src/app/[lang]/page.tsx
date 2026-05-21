@@ -295,23 +295,34 @@ export default function HomePage() {
                 Bauen Sie Ihr eigenes Flugzeug
               </h2>
               <p className="mt-4 text-neutral-400 leading-relaxed">
-                In der Schweiz werden Sling Flugzeuge als Kit nach der
-                Eigenbau-Regel (51%) gebaut und unter BAZL-Aufsicht zugelassen.
-                Dieser Weg ermöglicht es Ihnen, Ihr Flugzeug selbst zu bauen
-                und dabei von professioneller Begleitung zu profitieren.
+                In der Schweiz fallen Sling Flugzeuge in die <strong className="text-white">Sonderkategorie
+                «Experimental»</strong> (Homebuilt). Sie werden als Kit nach der
+                Eigenbau-Regel (51%) gebaut und unter Aufsicht des BAZL
+                (Bundesamt für Zivilluftfahrt) zugelassen. Die EAS begleitet
+                den gesamten Prozess – von der Projektbeurteilung bis zur
+                Verkehrszulassung.
               </p>
               <p className="mt-4 text-neutral-400 leading-relaxed">
                 <strong className="text-white">Brauchen Sie Unterstützung beim Bau?</strong>{" "}
                 Wir helfen Ihnen gerne – kontaktieren Sie uns für individuelle Baubegleitung.
               </p>
-              <div className="mt-8">
+              <div className="mt-8 flex flex-wrap gap-4">
                 <a
                   href="https://experimental.ch"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-brand-600 text-white font-semibold rounded-lg hover:bg-brand-500 transition-colors"
                 >
-                  Mehr über EAS erfahren
+                  EAS erfahren
+                  <ChevronRight className="h-4 w-4" />
+                </a>
+                <a
+                  href="https://www.bazl.admin.ch/de/entwicklung-herstellung-musterzulassung-anderungen"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 border border-neutral-700 text-white font-semibold rounded-lg hover:border-brand-600 transition-colors"
+                >
+                  BAZL Regulierung
                   <ChevronRight className="h-4 w-4" />
                 </a>
               </div>
