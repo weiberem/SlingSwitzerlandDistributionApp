@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin, Instagram } from "lucide-react";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 
@@ -75,6 +75,15 @@ export default function Footer({
                 <MapPin className="h-4 w-4 text-brand-500 shrink-0" />
                 <span>Thun Airport & Zweisimmen</span>
               </div>
+              <a
+                href="https://instagram.com/slingaircraftswitzerland"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-sm hover:text-brand-400 transition-colors"
+              >
+                <Instagram className="h-4 w-4 text-brand-500" />
+                @slingaircraftswitzerland
+              </a>
             </div>
           </div>
 
