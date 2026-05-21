@@ -339,16 +339,16 @@ export default function HomePage() {
               transition={{ delay: 0.1 }}
               className="space-y-6"
             >
-              {/* Projekt-Ablauf */}
+              {/* Projekt-Ablauf als Accordion */}
               <div className="bg-neutral-900 rounded-2xl p-8 border border-neutral-800">
                 <div className="h-1 bg-brand-600 rounded-full mb-6" />
                 <h3 className="text-lg font-bold text-white mb-2">
                   Ihr Sling Projekt in der Schweiz
                 </h3>
                 <p className="text-xs text-neutral-400 mb-6">
-                  Ein bewährtes Kit-Flugzeug – hundertfach gebaut, proven design. Ihr Boost fürs Fliegerabenteuer.
+                  Ein bewährtes Kit-Flugzeug – hundertfach gebaut, proven design. Klicken Sie auf einen Schritt für Details.
                 </p>
-                <div className="space-y-6">
+                <div className="space-y-2">
                   {[
                     { step: "1", title: "Beratung & Modellwahl", desc: "Persönliche Beratung – wir finden gemeinsam das passende Modell für Ihre Bedürfnisse und Ziele." },
                     { step: "2", title: "Vorbereitung & EAS-Anmeldung", desc: "EAS-Mitgliedschaft und Projektanmeldung. Ingenieur-Beurteilung und Freigabe. Den idealen Bauplatz vorbereiten – keine Angst, viele Sling wurden in ganz normalen Garagen gebaut!" },
@@ -358,20 +358,23 @@ export default function HomePage() {
                     { step: "6", title: "Abnahme & Flugversuche", desc: "Koordiniert durch EAS und BAZL. Saubere Abnahmeprozedur für den sicheren Betrieb Ihres Flugzeugs." },
                     { step: "7", title: "Verkehrszulassung & Abheben!", desc: "BAZL erteilt die Zulassung. Ihr Flugzeug ist eingetragen – und Sie heben ab! Willkommen in der Sling-Familie." },
                   ].map((item) => (
-                    <div key={item.step} className="flex gap-4">
-                      <div className="w-8 h-8 rounded-full bg-brand-600 flex items-center justify-center shrink-0 text-sm font-bold text-white">
-                        {item.step}
+                    <details key={item.step} className="group">
+                      <summary className="flex gap-4 items-center cursor-pointer list-none py-3 px-3 rounded-xl hover:bg-neutral-800/50 transition-colors">
+                        <div className="w-8 h-8 rounded-full bg-brand-600 flex items-center justify-center shrink-0 text-sm font-bold text-white">
+                          {item.step}
+                        </div>
+                        <h4 className="font-semibold text-white text-sm flex-1">{item.title}</h4>
+                        <ChevronRight className="h-4 w-4 text-neutral-500 group-open:rotate-90 transition-transform duration-200" />
+                      </summary>
+                      <div className="ml-16 pb-3 pr-8">
+                        <p className="text-xs text-neutral-400 leading-relaxed">{item.desc}</p>
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-white text-sm">{item.title}</h4>
-                        <p className="text-xs text-neutral-400 mt-0.5 leading-relaxed">{item.desc}</p>
-                      </div>
-                    </div>
+                    </details>
                   ))}
                 </div>
 
                 {/* Bauanleitung Link */}
-                <div className="mt-8 pt-6 border-t border-neutral-800">
+                <div className="mt-6 pt-4 border-t border-neutral-800">
                   <a
                     href="https://slingaircraft.com/aircraft/sling-kits/"
                     target="_blank"
