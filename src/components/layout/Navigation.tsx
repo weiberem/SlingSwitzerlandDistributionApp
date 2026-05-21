@@ -138,12 +138,11 @@ export default function Navigation({
               </AnimatePresence>
             </div>
 
-            <Link
-              href={`/${lang}/konfigurator`}
-              className="ml-3 px-5 py-2.5 text-sm font-semibold rounded-lg bg-brand-600 text-white hover:bg-brand-500 shadow-lg shadow-brand-600/30 transition-all duration-300"
+            <span
+              className="ml-3 px-5 py-2.5 text-sm font-semibold rounded-lg bg-neutral-700 text-neutral-400 cursor-default"
             >
-              {dict.nav.cta}
-            </Link>
+              Bald verfügbar
+            </span>
           </div>
 
           {/* Mobile Menu Button */}
@@ -197,12 +196,11 @@ export default function Navigation({
               </div>
 
               <div className="pt-4">
-                <Link
-                  href={`/${lang}/konfigurator`}
-                  className="block w-full text-center px-5 py-3 bg-brand-600 text-white font-semibold rounded-lg hover:bg-brand-500 transition-colors"
+                <span
+                  className="block w-full text-center px-5 py-3 bg-neutral-700 text-neutral-400 font-semibold rounded-lg cursor-default"
                 >
-                  {dict.nav.cta}
-                </Link>
+                  Bald verfügbar
+                </span>
               </div>
             </div>
           </motion.div>

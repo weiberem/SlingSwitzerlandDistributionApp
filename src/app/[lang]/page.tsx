@@ -83,8 +83,8 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.7 }}
               className="mt-10 flex flex-col sm:flex-row gap-4"
             >
-              <Button href="/konfigurator" size="lg">
-                Konfigurator starten
+              <Button href="#kontakt" size="lg">
+                Kontakt aufnehmen
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button href="#flugzeuge" variant="outline" size="lg">
@@ -428,23 +428,23 @@ export default function HomePage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <motion.div {...fadeInUp}>
             <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] mb-4 text-white/70">
-              Online Konfigurator
+              Konfigurator im Aufbau
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
-              Gestalten Sie Ihr Traumflugzeug
+              Bald können Sie Ihren Sling konfigurieren
             </h2>
             <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-              Wählen Sie Ihr Modell, die Farbe, Avionik und Ausstattung. Unser
-              Konfigurator hilft Ihnen, Ihre individuelle
-              Wunschkonfiguration zusammenzustellen.
+              Unser Online-Konfigurator wird derzeit entwickelt. Bald können Sie
+              Ihr Modell, die Avionik und Ausstattung bequem online zusammenstellen.
+              In der Zwischenzeit beraten wir Sie gerne persönlich.
             </p>
             <div className="mt-10">
               <Button
-                href="/konfigurator"
+                href="#kontakt"
                 size="lg"
                 className="bg-white text-brand-700 hover:bg-neutral-100 shadow-xl shadow-black/30"
               >
-                Konfigurator öffnen
+                Jetzt beraten lassen
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
