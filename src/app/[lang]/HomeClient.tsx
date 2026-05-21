@@ -33,7 +33,6 @@ const fadeInUp = {
 };
 
 export default function HomeClient({
-  lang,
   dict,
 }: {
   lang: Locale;
@@ -102,11 +101,14 @@ export default function HomeClient({
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.75 }}
-              className="mt-8 flex flex-col sm:flex-row gap-4"
+              className="mt-8 flex flex-col sm:flex-row flex-wrap gap-4"
             >
-              <Button href="#kontakt" size="lg">
-                {t.heroCtaPrimary}
+              <Button href="https://slingaircraftconfig.app" external size="lg">
+                {t.configuratorCta}
                 <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button href="#kontakt" variant="outline" size="lg">
+                {t.heroCtaPrimary}
               </Button>
               <Button href="#flugzeuge" variant="outline" size="lg">
                 {t.heroCtaSecondary}
@@ -443,7 +445,8 @@ export default function HomeClient({
             </p>
             <div className="mt-10">
               <Button
-                href={`/${lang}/konfigurator`}
+                href="https://slingaircraftconfig.app"
+                external
                 size="lg"
                 className="bg-white text-brand-700 hover:bg-neutral-100 shadow-xl shadow-black/30"
               >

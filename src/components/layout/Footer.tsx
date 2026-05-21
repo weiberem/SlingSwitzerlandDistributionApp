@@ -35,7 +35,11 @@ export default function Footer({
       { href: `/${lang}#flugzeuge`, label: "Sling 2" },
       { href: `/${lang}#flugzeuge`, label: "Sling TSi" },
       { href: `/${lang}#flugzeuge`, label: "Sling High Wing" },
-      { href: `/${lang}/konfigurator`, label: dict.nav.configurator },
+      {
+        href: "https://slingaircraftconfig.app",
+        label: dict.nav.configurator,
+        external: true,
+      },
     ],
     unternehmen: [
       { href: `/${lang}#ueber-uns`, label: dict.footer.about },
@@ -117,12 +121,23 @@ export default function Footer({
             <ul className="space-y-3">
               {footerLinks.flugzeuge.map((link) => (
                 <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm hover:text-brand-400 transition-colors"
-                  >
-                    {link.label}
-                  </Link>
+                  {"external" in link && link.external ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm hover:text-brand-400 transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-sm hover:text-brand-400 transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

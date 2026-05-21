@@ -3,6 +3,7 @@ import { clsx } from "clsx";
 
 interface ButtonProps {
   href?: string;
+  external?: boolean;
   variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
   children: React.ReactNode;
@@ -30,6 +31,7 @@ const sizes = {
 
 export default function Button({
   href,
+  external,
   variant = "primary",
   size = "md",
   children,
@@ -47,6 +49,18 @@ export default function Button({
   );
 
   if (href) {
+    if (external) {
+      return (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes}
+        >
+          {children}
+        </a>
+      );
+    }
     return (
       <Link href={href} className={classes}>
         {children}
