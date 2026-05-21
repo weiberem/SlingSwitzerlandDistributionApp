@@ -1,6 +1,25 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, MapPin, Instagram } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
+
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 
@@ -13,19 +32,15 @@ export default function Footer({
 }) {
   const footerLinks = {
     flugzeuge: [
-      { href: `/${lang}/flugzeuge/sling-2`, label: "Sling 2" },
-      { href: `/${lang}/flugzeuge/sling-4`, label: "Sling 4" },
-      { href: `/${lang}/flugzeuge/sling-tsi`, label: "Sling TSi" },
-      { href: `/${lang}/flugzeuge/sling-high-wing`, label: "Sling High Wing" },
+      { href: `/${lang}#flugzeuge`, label: "Sling 2" },
+      { href: `/${lang}#flugzeuge`, label: "Sling TSi" },
+      { href: `/${lang}#flugzeuge`, label: "Sling High Wing" },
       { href: `/${lang}/konfigurator`, label: dict.nav.configurator },
     ],
     unternehmen: [
-      { href: `/${lang}/ueber-uns`, label: dict.footer.about },
-      {
-        href: `/${lang}/service`,
-        label: dict.footer.serviceAndMaintenance,
-      },
-      { href: `/${lang}/kontakt`, label: dict.nav.contact },
+      { href: `/${lang}#ueber-uns`, label: dict.footer.about },
+      { href: `/${lang}#service`, label: dict.footer.serviceAndMaintenance },
+      { href: `/${lang}#kontakt`, label: dict.nav.contact },
     ],
     rechtliches: [
       { href: `/${lang}/impressum`, label: dict.footer.imprint },
@@ -81,7 +96,7 @@ export default function Footer({
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-sm hover:text-brand-400 transition-colors"
               >
-                <Instagram className="h-4 w-4 text-brand-500" />
+                <InstagramIcon className="h-4 w-4 text-brand-500" />
                 @sling_aircraft_switzerland
               </a>
             </div>
@@ -94,7 +109,7 @@ export default function Footer({
             </h3>
             <ul className="space-y-3">
               {footerLinks.flugzeuge.map((link) => (
-                <li key={link.href}>
+                <li key={link.label}>
                   <Link
                     href={link.href}
                     className="text-sm hover:text-brand-400 transition-colors"
@@ -113,7 +128,7 @@ export default function Footer({
             </h3>
             <ul className="space-y-3">
               {footerLinks.unternehmen.map((link) => (
-                <li key={link.href}>
+                <li key={link.label}>
                   <Link
                     href={link.href}
                     className="text-sm hover:text-brand-400 transition-colors"
@@ -132,7 +147,7 @@ export default function Footer({
             </h3>
             <ul className="space-y-3">
               {footerLinks.rechtliches.map((link) => (
-                <li key={link.href}>
+                <li key={link.label}>
                   <Link
                     href={link.href}
                     className="text-sm hover:text-brand-400 transition-colors"
