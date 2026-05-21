@@ -353,36 +353,46 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="bg-neutral-900 rounded-2xl p-8 border border-neutral-800"
+              className="space-y-6"
             >
-              <div className="h-1 bg-brand-600 rounded-full mb-6" />
-              <h3 className="text-lg font-bold text-white mb-3">
-                EAS – Experimental Aviation of Switzerland
-              </h3>
-              <p className="text-sm text-neutral-400 leading-relaxed mb-4">
-                Seit 1963 begleitet die EAS ihre rund 500 Mitglieder beim Bau
-                eigener Flugzeuge. Die Flotte umfasst ca. 130 fliegende und
-                120 weitere Flugzeuge im Bauprozess.
-              </p>
-              <p className="text-sm text-neutral-400 leading-relaxed mb-4">
-                Als Spartenverband des Aero-Club der Schweiz vereinfacht und
-                standardisiert die EAS den gesamten Prozess – von der
-                technischen Beurteilung neuer Projekte über die Bauberatung
-                bis zur Verkehrszulassung.
-              </p>
-              <div className="space-y-3 mt-6">
-                {[
-                  "Technische Beurteilung durch EAS-Ingenieure",
-                  "Bauberatung und Qualitätsüberwachung",
-                  "Kontrolle der Flugversuche",
-                  "Zweijährliche Lufttüchtigkeitsprüfung (BAZL)",
-                  "Offizielle Lärmmessungen",
-                ].map((item) => (
-                  <div key={item} className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 shrink-0" />
-                    <span className="text-sm text-neutral-300">{item}</span>
-                  </div>
-                ))}
+              {/* Projekt-Ablauf */}
+              <div className="bg-neutral-900 rounded-2xl p-8 border border-neutral-800">
+                <div className="h-1 bg-brand-600 rounded-full mb-6" />
+                <h3 className="text-lg font-bold text-white mb-6">
+                  Ihr Sling Projekt in der Schweiz
+                </h3>
+                <div className="space-y-5">
+                  {[
+                    { step: "1", title: "Beratung & Modellwahl", desc: "Wir beraten Sie persönlich und finden das passende Modell für Ihre Bedürfnisse." },
+                    { step: "2", title: "EAS-Mitgliedschaft & Projektanmeldung", desc: "Anmeldung bei der EAS – Ihr Projekt wird von Ingenieuren beurteilt und freigegeben." },
+                    { step: "3", title: "Kit bestellen & liefern", desc: "Bestellung ab Werk in Südafrika. Lieferung frei Haus in die Schweiz in 14–20 Tagen." },
+                    { step: "4", title: "Bauen – mit Unterstützung", desc: "Sie bauen Ihr Flugzeug selbst (51%-Regel). Wir und die EAS stehen Ihnen jederzeit zur Seite." },
+                    { step: "5", title: "Abnahme & Flugversuche", desc: "EAS-Techniker kontrollieren den Bau, begleiten die Flugversuche und nehmen das Flugzeug ab." },
+                    { step: "6", title: "Verkehrszulassung & Fliegen", desc: "BAZL erteilt die Zulassung. Ihr Flugzeug ist eingetragen und Sie heben ab!" },
+                  ].map((item) => (
+                    <div key={item.step} className="flex gap-4">
+                      <div className="w-8 h-8 rounded-full bg-brand-600 flex items-center justify-center shrink-0 text-sm font-bold text-white">
+                        {item.step}
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-white text-sm">{item.title}</h4>
+                        <p className="text-xs text-neutral-400 mt-0.5">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* EAS Info kompakt */}
+              <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+                <h4 className="font-semibold text-white text-sm mb-2">
+                  EAS – Experimental Aviation of Switzerland
+                </h4>
+                <p className="text-xs text-neutral-400 leading-relaxed">
+                  Seit 1963 begleitet die EAS rund 500 Mitglieder beim Eigenbau.
+                  Ca. 130 fliegende und 120 weitere Flugzeuge im Bau. Ihr Verein
+                  für technische Beurteilung, Bauberatung, Flugversuche und Zulassung.
+                </p>
               </div>
             </motion.div>
           </div>
