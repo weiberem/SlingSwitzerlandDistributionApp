@@ -63,11 +63,7 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.1]"
             >
-              Dream. Build.
-              <br />
-              <span className="text-brand-500">
-                Fly.
-              </span>
+              Dream. Build. <span className="text-brand-500">Fly.</span>
             </motion.h1>
 
             <motion.p
@@ -96,28 +92,6 @@ export default function HomePage() {
               </Button>
             </motion.div>
 
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 1.0 }}
-              className="mt-20 grid grid-cols-3 gap-8 max-w-lg"
-            >
-              {[
-                { value: "3", label: "Modelle" },
-                { value: "2-4", label: "Sitzplätze" },
-                { value: "140", label: "kts max." },
-              ].map((stat) => (
-                <div key={stat.label}>
-                  <div className="text-2xl sm:text-3xl font-bold text-white">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-neutral-500 mt-1">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </motion.div>
           </div>
         </div>
 
