@@ -58,11 +58,11 @@ export default function Footer({
             </p>
             <div className="space-y-3">
               <a
-                href="tel:+41000000000"
+                href="mailto:info@slingaircraftswitzerland.ch"
                 className="flex items-center gap-3 text-sm hover:text-brand-400 transition-colors"
               >
-                <Phone className="h-4 w-4 text-brand-500" />
-                +41 (0) 00 000 00 00
+                <MapPin className="h-4 w-4 text-brand-500" />
+                Flugplatzstrasse, 3603 Thun
               </a>
               <a
                 href="mailto:info@slingaircraftswitzerland.ch"
@@ -73,7 +73,7 @@ export default function Footer({
               </a>
               <div className="flex items-center gap-3 text-sm">
                 <MapPin className="h-4 w-4 text-brand-500 shrink-0" />
-                <span>Schweiz</span>
+                <span>Thun Airport & Zweisimmen</span>
               </div>
             </div>
           </div>

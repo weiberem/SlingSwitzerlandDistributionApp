@@ -230,15 +230,15 @@ export default function KontaktPage() {
                   </h3>
                   <div className="space-y-4">
                     <a
-                      href="tel:+41000000000"
+                      href="mailto:info@slingaircraftswitzerland.ch"
                       className="flex items-center gap-3 text-neutral-400 hover:text-brand-500 transition-colors"
                     >
                       <div className="w-10 h-10 rounded-lg bg-brand-600/15 flex items-center justify-center shrink-0">
                         <Phone className="h-5 w-5 text-brand-500" />
                       </div>
                       <div>
-                        <div className="text-xs text-neutral-400">Telefon</div>
-                        <div className="font-medium">+41 (0) 00 000 00 00</div>
+                        <div className="text-xs text-neutral-400">Adresse</div>
+                        <div className="font-medium">Flugplatzstrasse, 3603 Thun</div>
                       </div>
                     </a>
                     <a
@@ -260,8 +260,8 @@ export default function KontaktPage() {
                         <MapPin className="h-5 w-5 text-brand-500" />
                       </div>
                       <div>
-                        <div className="text-xs text-neutral-400">Standort</div>
-                        <div className="font-medium">Schweiz</div>
+                        <div className="text-xs text-neutral-400">Standorte</div>
+                        <div className="font-medium">Thun Airport & Zweisimmen</div>
                       </div>
                     </div>
                   </div>
@@ -309,11 +309,11 @@ export default function KontaktPage() {
                     einen unverbindlichen Probeflug.
                   </p>
                   <a
-                    href="tel:+41000000000"
+                    href="mailto:info@slingaircraftswitzerland.ch"
                     className="inline-flex items-center gap-2 text-sm font-semibold bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-colors"
                   >
                     <Phone className="h-4 w-4" />
-                    Jetzt anrufen
+                    Kontakt aufnehmen
                   </a>
                 </div>
               </motion.div>
