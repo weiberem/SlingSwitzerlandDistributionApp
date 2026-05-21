@@ -161,15 +161,6 @@ export default function HomeClient({
                         priority={index === 0}
                       />
                       <div className="absolute inset-0 bg-brand-600/0 group-hover:bg-brand-600/10 transition-colors duration-500 z-10" />
-                      <a
-                        href={`https://www.youtube.com/watch?v=${plane.video.videoId}&t=${plane.video.startSeconds}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="absolute bottom-4 left-4 z-20 inline-flex items-center gap-2 px-4 py-2 bg-black/60 backdrop-blur-sm text-sm font-medium text-white hover:bg-brand-600/80 rounded-lg transition-all border border-white/10 hover:border-brand-500"
-                      >
-                        {t.watchVideo}
-                        <ChevronRight className="h-4 w-4" />
-                      </a>
                     </div>
 
                     {/* Content right */}
