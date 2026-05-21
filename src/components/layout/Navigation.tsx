@@ -31,19 +31,12 @@ export default function Navigation({
   const pathname = usePathname();
 
   const navLinks = [
-    { href: `/${lang}`, label: dict.nav.home },
-    {
-      href: `/${lang}/flugzeuge`,
-      label: dict.nav.aircraft,
-      children: aircraft.map((a) => ({
-        href: `/${lang}/flugzeuge/${a.id}`,
-        label: a.name,
-      })),
-    },
-    { href: `/${lang}/konfigurator`, label: dict.nav.configurator },
-    { href: `/${lang}/ueber-uns`, label: dict.nav.about },
-    { href: `/${lang}/service`, label: dict.nav.service },
-    { href: `/${lang}/kontakt`, label: dict.nav.contact },
+    { href: `/${lang}#hero`, label: dict.nav.home },
+    { href: `/${lang}#flugzeuge`, label: dict.nav.aircraft },
+    { href: `/${lang}#konfigurator`, label: dict.nav.configurator },
+    { href: `/${lang}#ueber-uns`, label: dict.nav.about },
+    { href: `/${lang}#service`, label: dict.nav.service },
+    { href: `/${lang}#kontakt`, label: dict.nav.contact },
   ];
 
   useEffect(() => {
@@ -91,52 +84,13 @@ export default function Navigation({
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
-              <div
+              <Link
                 key={link.href}
-                className="relative"
-                onMouseEnter={() =>
-                  link.children && setActiveDropdown(link.href)
-                }
-                onMouseLeave={() => setActiveDropdown(null)}
+                href={link.href}
+                className="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 text-white/70 hover:text-white hover:bg-white/5"
               >
-                <Link
-                  href={link.href}
-                  className={clsx(
-                    "px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 flex items-center gap-1",
-                    pathname === link.href
-                      ? "text-brand-400 bg-brand-500/10"
-                      : "text-white/70 hover:text-white hover:bg-white/5"
-                  )}
-                >
-                  {link.label}
-                  {link.children && <ChevronDown className="h-3 w-3" />}
-                </Link>
-
-                {/* Dropdown */}
-                <AnimatePresence>
-                  {link.children && activeDropdown === link.href && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 8 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 8 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-1 w-56 bg-neutral-900 rounded-xl shadow-xl shadow-black/40 border border-neutral-700 overflow-hidden"
-                    >
-                      <div className="p-2">
-                        {link.children.map((child) => (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            className="block px-4 py-2.5 text-sm text-neutral-300 hover:text-white hover:bg-brand-600/20 rounded-lg transition-colors"
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+                {link.label}
+              </Link>
             ))}
 
             {/* Language Switcher */}
@@ -215,32 +169,13 @@ export default function Navigation({
           >
             <div className="px-4 py-6 space-y-1">
               {navLinks.map((link) => (
-                <div key={link.href}>
-                  <Link
-                    href={link.href}
-                    className={clsx(
-                      "block px-4 py-3 text-base font-medium rounded-lg transition-colors",
-                      pathname === link.href
-                        ? "text-brand-400 bg-brand-500/10"
-                        : "text-neutral-300 hover:text-white hover:bg-white/5"
-                    )}
-                  >
-                    {link.label}
-                  </Link>
-                  {link.children && (
-                    <div className="pl-4 mt-1 space-y-1">
-                      {link.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          className="block px-4 py-2 text-sm text-neutral-500 hover:text-brand-400 rounded-lg"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="block px-4 py-3 text-base font-medium rounded-lg transition-colors text-neutral-300 hover:text-white hover:bg-white/5"
+                >
+                  {link.label}
+                </Link>
               ))}
 
               {/* Mobile Language Switcher */}

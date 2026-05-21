@@ -30,7 +30,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
         {/* Video Background with fallback */}
         <HeroVideo />
         {/* Red glow overlay */}
@@ -142,7 +142,7 @@ export default function HomePage() {
       <div className="h-1.5 bg-brand-600" />
 
       {/* Aircraft Showcase */}
-      <section className="py-24 lg:py-32 bg-neutral-950">
+      <section id="flugzeuge" className="py-24 lg:py-32 bg-neutral-950 scroll-mt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Unsere Flugzeuge"
@@ -234,7 +234,7 @@ export default function HomePage() {
       </section>
 
       {/* Why Sling Section - with transparent red bar */}
-      <section className="relative py-24 lg:py-32 bg-black text-white overflow-hidden">
+      <section id="ueber-uns" className="relative py-24 lg:py-32 bg-black text-white overflow-hidden scroll-mt-24">
         {/* Transparent red side bar */}
         <div className="absolute left-0 top-0 bottom-0 w-2 bg-brand-600/60" />
         <div className="absolute left-4 top-0 bottom-0 w-[1px] bg-brand-600/20" />
@@ -291,7 +291,7 @@ export default function HomePage() {
       </section>
 
       {/* EAS & Eigenbau Regulation */}
-      <section className="py-24 lg:py-32 bg-neutral-950">
+      <section id="service" className="py-24 lg:py-32 bg-neutral-950 scroll-mt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -381,7 +381,7 @@ export default function HomePage() {
       </section>
 
       {/* Configurator CTA - Red gradient band */}
-      <section className="relative py-24 lg:py-32 overflow-hidden">
+      <section id="konfigurator" className="relative py-24 lg:py-32 overflow-hidden scroll-mt-24">
         {/* Red gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-brand-800 via-brand-700 to-brand-900" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0)_0%,_rgba(0,0,0,0.4)_100%)]" />
@@ -420,7 +420,7 @@ export default function HomePage() {
       </section>
 
       {/* Contact Teaser */}
-      <section className="py-24 lg:py-32 bg-neutral-950">
+      <section id="kontakt" className="py-24 lg:py-32 bg-neutral-950 scroll-mt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div {...fadeInUp}>
