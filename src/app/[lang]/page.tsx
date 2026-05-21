@@ -72,8 +72,8 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="mt-6 text-lg sm:text-xl text-neutral-400 max-w-2xl leading-relaxed"
             >
-              Ihr Traum vom eigenen Flugzeug beginnt hier. Als offizieller
-              Sling Aircraft Händler in der Schweiz begleiten wir Sie vom
+              Dein Traum vom eigenen Flugzeug beginnt hier. Als offizieller
+              Sling Aircraft Händler in der Schweiz begleiten wir dich vom
               ersten Kit-Teil bis zum ersten Flug.
             </motion.p>
 
@@ -236,7 +236,7 @@ export default function HomePage() {
           <SectionHeading
             label="Warum Sling?"
             title="Exzellenz in jeder Hinsicht"
-            description="Sling Aircraft steht für Innovation, Qualität und Leidenschaft. Erfahren Sie, warum immer mehr Piloten weltweit auf Sling setzen."
+            description="Sling Aircraft steht für Innovation, Qualität und Leidenschaft. Erfahre, warum immer mehr Piloten weltweit auf Sling setzen."
           />
 
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -302,20 +302,20 @@ export default function HomePage() {
             <div className="bg-neutral-900 rounded-2xl p-8 border border-neutral-800">
               <div className="h-1 bg-brand-600 rounded-full mb-6" />
               <h3 className="text-lg font-bold text-white mb-2">
-                Ihr Sling Projekt – Schritt für Schritt
+                Dein Sling Projekt – Schritt für Schritt
               </h3>
               <p className="text-xs text-neutral-400 mb-6">
                 Ein bewährtes Kit-Flugzeug – hundertfach gebaut, proven design. Klicken Sie auf einen Schritt für Details.
               </p>
               <div className="space-y-2">
                 {[
-                  { step: "1", title: "Beratung & Modellwahl", desc: "Persönliche Beratung – wir finden gemeinsam das passende Modell für Ihre Bedürfnisse und Ziele." },
+                  { step: "1", title: "Beratung & Modellwahl", desc: "Persönliche Beratung – wir finden gemeinsam das passende Modell für deine Bedürfnisse und Ziele." },
                   { step: "2", title: "Vorbereitung & EAS-Anmeldung", desc: "EAS-Mitgliedschaft und Projektanmeldung. Ingenieur-Beurteilung und Freigabe. Den idealen Bauplatz vorbereiten – keine Angst, viele Sling wurden in ganz normalen Garagen gebaut!" },
-                  { step: "3", title: "Kit bestellen & liefern", desc: "Bestellung ab Werk in Südafrika. Door-to-door Lieferung in 14–20 Tagen kann von uns organisiert werden. Sie können auch Teilbereiche separat bestellen (Empennage, Flügel, Rumpf, Canopy, Finishing Kit) – so nutzen Sie Ihren Platz optimal." },
-                  { step: "4", title: "Bauen – mit oder ohne Unterstützung", desc: "Sie bauen Ihr Flugzeug selbst (51%-Regel). Ein EAS-Bauberater wird Ihnen zugewiesen. Sie entscheiden, wie viel Unterstützung Sie möchten – ob komplett eigenständig oder mit professioneller Begleitung. Verschiedene Dienstleistungen verfügbar in Absprache mit EAS/BAZL. Detaillierte Bauanleitungen und Videos zu jedem Schritt. Passende Werkzeuge und Zubehör beraten wir gerne." },
-                  { step: "5", title: "Schulung während dem Bau", desc: "Tageskurse organisiert durch die EAS – einige freiwillig je nach Vorkenntnissen, einige Pflicht (z.B. wenn Sie das Flugzeug selbst warten möchten). So sind Sie bestens vorbereitet." },
+                  { step: "3", title: "Kit bestellen & liefern", desc: "Bestellung ab Werk in Südafrika. Door-to-door Lieferung in 14–20 Tagen kann von uns organisiert werden. Du kannst auch Teilbereiche separat bestellen (Empennage, Flügel, Rumpf, Canopy, Finishing Kit) – so nutzen Sie deinen Platz optimal." },
+                  { step: "4", title: "Bauen – mit oder ohne Unterstützung", desc: "Du baust dein Flugzeug selbst (51%-Regel). Ein EAS-Bauberater wird dir zugewiesen. Du entscheidest, wie viel Unterstützung du möchtest – ob komplett eigenständig oder mit professioneller Begleitung. Verschiedene Dienstleistungen verfügbar in Absprache mit EAS/BAZL. Detaillierte Bauanleitungen und Videos zu jedem Schritt. Passende Werkzeuge und Zubehör beraten wir gerne." },
+                  { step: "5", title: "Schulung während dem Bau", desc: "Tageskurse organisiert durch die EAS – einige freiwillig je nach Vorkenntnissen, einige Pflicht (z.B. wenn Sie das Flugzeug selbst warten möchten). So bist du bestens vorbereitet." },
                   { step: "6", title: "Abnahme & Flugversuche", desc: "Koordiniert durch EAS und BAZL. Saubere Abnahmeprozedur für den sicheren Betrieb Ihres Flugzeugs." },
-                  { step: "7", title: "Verkehrszulassung & Abheben!", desc: "BAZL erteilt die Zulassung. Ihr Flugzeug ist eingetragen – und Sie heben ab! Willkommen in der Sling-Familie." },
+                  { step: "7", title: "Verkehrszulassung & Abheben!", desc: "BAZL erteilt die Zulassung. Dein Flugzeug ist eingetragen – und du hebst ab! Willkommen in der Sling-Familie." },
                 ].map((item) => (
                   <details key={item.step} className="group">
                     <summary className="flex gap-4 items-center cursor-pointer list-none py-3 px-3 rounded-xl hover:bg-neutral-800/50 transition-colors">
@@ -361,6 +361,7 @@ export default function HomePage() {
                   "Rotax – kein Avgas nötig",
                   "Optionales BRS Rettungssystem",
                   "Long Range Tanks & O₂ nach Wunsch",
+                  "Schleppkupplung bei allen Modellen möglich",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 shrink-0" />
@@ -397,7 +398,7 @@ export default function HomePage() {
               </h4>
               <p className="text-xs text-neutral-400 leading-relaxed mb-4">
                 Kit-Bau nach Eigenbau-Regel (51%) unter Aufsicht des BAZL.
-                Brauchen Sie Unterstützung? Wir helfen gerne – kontaktieren Sie uns.
+                Brauchst du Unterstützung? Wir helfen gerne – kontaktiere uns.
               </p>
               <a
                 href="https://www.bazl.admin.ch/de/entwicklung-herstellung-musterzulassung-anderungen"
@@ -431,12 +432,12 @@ export default function HomePage() {
               Konfigurator im Aufbau
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
-              Bald können Sie Ihren Sling konfigurieren
+              Bald kannst du deinen Sling konfigurieren
             </h2>
             <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-              Unser Online-Konfigurator wird derzeit entwickelt. Bald können Sie
-              Ihr Modell, die Avionik und Ausstattung bequem online zusammenstellen.
-              In der Zwischenzeit beraten wir Sie gerne persönlich.
+              Unser Online-Konfigurator wird derzeit entwickelt. Bald kannst du
+              dein Modell, die Avionik und Ausstattung bequem online zusammenstellen.
+              In der Zwischenzeit beraten wir dich gerne persönlich.
             </p>
             <div className="mt-10">
               <Button
@@ -565,7 +566,7 @@ export default function HomePage() {
                 align="left"
                 label="Kontakt"
                 title="Bereit für Ihr nächstes Abenteuer?"
-                description="Vereinbaren Sie einen Termin für eine persönliche Beratung oder einen Probeflug. Wir freuen uns auf Sie."
+                description="Vereinbare einen Termin für eine persönliche Beratung oder einen Probeflug. Wir freuen uns auf dich."
               />
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <Button href="/kontakt">Kontakt aufnehmen</Button>
@@ -589,7 +590,7 @@ export default function HomePage() {
                   {
                     icon: Plane,
                     title: "Probeflug",
-                    text: "Erleben Sie Sling Aircraft aus erster Hand",
+                    text: "Erlebe Sling Aircraft aus erster Hand",
                   },
                   {
                     icon: Users,
