@@ -27,14 +27,15 @@ export default function HeroVideo() {
           title="Sling Aircraft Background Video"
           className="absolute inset-0 w-full h-full"
           style={{ border: "none" }}
-          allow="autoplay; encrypted-media"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          loading="eager"
           onLoad={() => setIsLoaded(true)}
         />
       </div>
 
-      <div className="absolute inset-0 bg-black/35" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent" />
     </div>
   );
 }

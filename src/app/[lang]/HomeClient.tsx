@@ -47,7 +47,7 @@ export default function HomeClient({
       {/* Hero Section */}
       <section
         id="hero"
-        className="relative min-h-screen flex items-center overflow-hidden"
+        className="relative min-h-screen flex flex-col overflow-hidden"
       >
         <HeroVideo />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(196,20,24,0.12)_0%,_transparent_60%)]" />
@@ -58,24 +58,30 @@ export default function HomeClient({
           <div className="absolute -top-20 right-20 w-[3px] h-[120%] bg-brand-600/30 rotate-12 transform origin-top-right" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 lg:pt-28 pb-32 lg:pb-40">
-          <div className="max-w-4xl">
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight leading-[1.05]"
-            >
-              Dream. Build. <span className="text-brand-500">Fly.</span>
-            </motion.h1>
+        {/* Top: Title */}
+        <div className="relative mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8 pt-32 lg:pt-36">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight leading-[1.05] max-w-4xl"
+          >
+            Dream. Build. <span className="text-brand-500">Fly.</span>
+          </motion.h1>
+        </div>
 
+        {/* Spacer keeps middle of hero free for the video */}
+        <div className="flex-1" />
+
+        {/* Bottom: Badge + short tagline + CTAs */}
+        <div className="relative mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8 pb-20 lg:pb-24">
+          <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-6"
             >
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-600/15 border border-brand-600/30 text-sm text-brand-400">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-600/15 border border-brand-600/30 text-sm text-brand-400 backdrop-blur-sm">
                 <Star className="h-4 w-4 text-brand-500" />
                 {t.heroBadge}
               </span>
@@ -85,7 +91,7 @@ export default function HomeClient({
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.55 }}
-              className="mt-8 text-lg sm:text-xl text-neutral-300 max-w-2xl leading-relaxed"
+              className="mt-5 text-base sm:text-lg text-neutral-200 max-w-2xl leading-relaxed"
             >
               {t.heroDescription}
             </motion.p>
@@ -94,7 +100,7 @@ export default function HomeClient({
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.75 }}
-              className="mt-10 flex flex-col sm:flex-row gap-4"
+              className="mt-8 flex flex-col sm:flex-row gap-4"
             >
               <Button href="#kontakt" size="lg">
                 {t.heroCtaPrimary}
