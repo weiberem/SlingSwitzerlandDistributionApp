@@ -33,9 +33,9 @@ export default function Navigation({
   const navLinks = [
     { href: `/${lang}#hero`, label: dict.nav.home },
     { href: `/${lang}#flugzeuge`, label: dict.nav.aircraft },
-    { href: `/${lang}#konfigurator`, label: dict.nav.configurator },
     { href: `/${lang}#ueber-uns`, label: dict.nav.about },
     { href: `/${lang}#service`, label: dict.nav.service },
+    { href: `/${lang}#konfigurator`, label: dict.nav.configurator },
     { href: `/${lang}#kontakt`, label: dict.nav.contact },
   ];
 
