@@ -33,6 +33,7 @@ const fadeInUp = {
 };
 
 export default function HomeClient({
+  lang,
   dict,
 }: {
   lang: Locale;
@@ -442,7 +443,7 @@ export default function HomeClient({
             </p>
             <div className="mt-10">
               <Button
-                href="#kontakt"
+                href={`/${lang}/konfigurator`}
                 size="lg"
                 className="bg-white text-brand-700 hover:bg-neutral-100 shadow-xl shadow-black/30"
               >

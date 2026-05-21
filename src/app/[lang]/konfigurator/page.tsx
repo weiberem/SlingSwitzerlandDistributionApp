@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import KonfiguratorEmbed from "./KonfiguratorEmbed";
 
 export const metadata: Metadata = {
-  title: "Konfigurator - Gestalten Sie Ihr Traumflugzeug",
+  title: "Konfigurator – Gestalte deinen Sling",
   description:
-    "Konfigurieren Sie Ihren Sling Aircraft online. Wählen Sie Modell, Avionik und Ausstattung.",
+    "Konfiguriere deinen Sling Aircraft online. Wähle Modell, Avionik und Ausstattung.",
 };
 
 export default function KonfiguratorPage() {
