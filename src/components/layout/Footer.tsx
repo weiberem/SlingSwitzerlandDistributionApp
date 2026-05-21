@@ -72,13 +72,24 @@ export default function Footer({
               {dict.footer.description}
             </p>
             <div className="space-y-3">
-              <a
-                href="mailto:info@slingaircraftswitzerland.ch"
-                className="flex items-center gap-3 text-sm hover:text-brand-400 transition-colors"
-              >
-                <MapPin className="h-4 w-4 text-brand-500" />
-                Flugplatzstrasse, 3603 Thun
-              </a>
+              <div className="flex items-start gap-3 text-sm">
+                <MapPin className="h-4 w-4 text-brand-500 shrink-0 mt-0.5" />
+                <div>
+                  <div className="text-xs text-neutral-500">
+                    {dict.home.airfield} LSZW
+                  </div>
+                  <div>Flugplatzstrasse, 3603 Thun</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 text-sm">
+                <MapPin className="h-4 w-4 text-brand-500 shrink-0 mt-0.5" />
+                <div>
+                  <div className="text-xs text-neutral-500">
+                    {dict.home.airfield} Zweisimmen
+                  </div>
+                  <div>Hangar 7, 3770 Zweisimmen</div>
+                </div>
+              </div>
               <a
                 href="mailto:info@slingaircraftswitzerland.ch"
                 className="flex items-center gap-3 text-sm hover:text-brand-400 transition-colors"
@@ -86,10 +97,6 @@ export default function Footer({
                 <Mail className="h-4 w-4 text-brand-500" />
                 info@slingaircraftswitzerland.ch
               </a>
-              <div className="flex items-center gap-3 text-sm">
-                <MapPin className="h-4 w-4 text-brand-500 shrink-0" />
-                <span>Flugplatzstrasse Thun & Hangar 7 Zweisimmen</span>
-              </div>
               <a
                 href="https://instagram.com/sling_aircraft_switzerland"
                 target="_blank"

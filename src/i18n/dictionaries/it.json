@@ -163,10 +163,10 @@
     "bazlTitle": "Regolamentazione UFAC",
     "bazlDescription": "Costruzione del kit secondo la regola del 51% sotto la supervisione dell'UFAC. Hai bisogno di supporto? Aiutiamo volentieri – contattaci.",
     "bazlCta": "Info UFAC",
-    "configuratorLabel": "Configuratore in costruzione",
-    "configuratorTitle": "Presto potrai configurare il tuo Sling",
-    "configuratorDescription": "Il nostro configuratore online è in fase di sviluppo. Presto potrai assemblare il modello, l'avionica e l'equipaggiamento comodamente online. Nel frattempo ti consigliamo volentieri di persona.",
-    "configuratorCta": "Chiedi una consulenza",
+    "configuratorLabel": "Configuratore online",
+    "configuratorTitle": "Componi il tuo Sling",
+    "configuratorDescription": "Scegli il modello, l'avionica e l'equipaggiamento nel configuratore online. In pochi passi alla tua configurazione desiderata – successivamente ti consigliamo volentieri di persona.",
+    "configuratorCta": "Avvia il configuratore",
     "partnersLabel": "I nostri partner",
     "partnersTitle": "Una rete solida per il tuo progetto",
     "partnersDescription": "Sling Aircraft Switzerland collabora con specialisti esperti affinché il tuo progetto sia seguito professionalmente dalla A alla Z.",
@@ -193,6 +193,7 @@
     "noSpecificModel": "Nessun modello specifico",
     "address": "Indirizzo",
     "locations": "Sedi",
+    "airfield": "Aerodromo",
     "bookTestflightDesc": "Vivi Sling Aircraft in prima persona. Prenota un volo di prova senza impegno."
   },
   "konfigurator": {
