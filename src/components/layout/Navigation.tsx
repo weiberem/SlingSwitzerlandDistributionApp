@@ -30,12 +30,20 @@ export default function Navigation({
   const [showLangMenu, setShowLangMenu] = useState(false);
   const pathname = usePathname();
 
-  const navLinks = [
+  const navLinks: Array<{
+    href: string;
+    label: string;
+    external?: boolean;
+  }> = [
     { href: `/${lang}#hero`, label: dict.nav.home },
     { href: `/${lang}#flugzeuge`, label: dict.nav.aircraft },
     { href: `/${lang}#ueber-uns`, label: dict.nav.about },
     { href: `/${lang}#service`, label: dict.nav.service },
-    { href: `/${lang}#konfigurator`, label: dict.nav.configurator },
+    {
+      href: "https://slingaircraftconfig.app",
+      label: dict.nav.configurator,
+      external: true,
+    },
     { href: `/${lang}#kontakt`, label: dict.nav.contact },
   ];
 
@@ -83,15 +91,27 @@ export default function Navigation({
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 text-white/70 hover:text-white hover:bg-white/5"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.external ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 text-white/70 hover:text-white hover:bg-white/5"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 text-white/70 hover:text-white hover:bg-white/5"
+                >
+                  {link.label}
+                </Link>
+              ),
+            )}
 
             {/* Language Switcher */}
             <div
@@ -162,15 +182,27 @@ export default function Navigation({
             className="lg:hidden bg-black/95 backdrop-blur-md border-t border-brand-600/20"
           >
             <div className="px-4 py-6 space-y-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="block px-4 py-3 text-base font-medium rounded-lg transition-colors text-neutral-300 hover:text-white hover:bg-white/5"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) =>
+                link.external ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-3 text-base font-medium rounded-lg transition-colors text-neutral-300 hover:text-white hover:bg-white/5"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="block px-4 py-3 text-base font-medium rounded-lg transition-colors text-neutral-300 hover:text-white hover:bg-white/5"
+                  >
+                    {link.label}
+                  </Link>
+                ),
+              )}
 
               {/* Mobile Language Switcher */}
               <div className="flex gap-2 px-4 pt-4 border-t border-neutral-800 mt-4">
