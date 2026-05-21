@@ -9,6 +9,12 @@ export interface AircraftVideo {
   endSeconds: number;
 }
 
+export interface QuickSpec {
+  value: string;
+  unit: string;
+  label: string;
+}
+
 export interface Aircraft {
   id: string;
   name: string;
@@ -17,6 +23,7 @@ export interface Aircraft {
   longDescription: string;
   seats: number;
   specs: AircraftSpec[];
+  quickSpecs: QuickSpec[];
   heroColor: string;
   features: string[];
   video: AircraftVideo;
@@ -42,6 +49,14 @@ export const aircraft: Aircraft[] = [
       { label: "Länge", value: "6.6 m" },
       { label: "MTOW", value: "600 kg" },
       { label: "Zulassung CH", value: "Eigenbau (51%-Regel)" },
+    ],
+    quickSpecs: [
+      { value: "280", unit: "KG", label: "Useful Load" },
+      { value: "830", unit: "NM", label: "Max Range" },
+      { value: "875", unit: "FPM", label: "Climb Rate" },
+      { value: "117", unit: "KTAS", label: "Cruise Speed" },
+      { value: "15", unit: "LT/HR", label: "Fuel Burn" },
+      { value: "2", unit: "SEATS", label: "Max Persons" },
     ],
     heroColor: "from-neutral-900 to-neutral-800",
     video: { videoId: "LbO28tBc1hU", startSeconds: 7, endSeconds: 20 },
@@ -76,6 +91,14 @@ export const aircraft: Aircraft[] = [
       { label: "MTOW", value: "920 kg" },
       { label: "Zulassung CH", value: "Eigenbau (51%-Regel)" },
     ],
+    quickSpecs: [
+      { value: "430", unit: "KG", label: "Useful Load" },
+      { value: "1,000", unit: "NM", label: "Max Range" },
+      { value: "940", unit: "FPM", label: "Climb Rate" },
+      { value: "155", unit: "KTAS", label: "Cruise Speed" },
+      { value: "28", unit: "LT/HR", label: "Fuel Burn" },
+      { value: "4", unit: "SEATS", label: "Max Persons" },
+    ],
     heroColor: "from-brand-900 to-brand-800",
     video: { videoId: "LbO28tBc1hU", startSeconds: 20, endSeconds: 40 },
     externalUrl: "https://slingaircraft.com/aircraft/sling-tsi/",
@@ -108,6 +131,14 @@ export const aircraft: Aircraft[] = [
       { label: "Propeller", value: "MT MTV-6 Constant-Speed" },
       { label: "MTOW", value: "920 kg" },
       { label: "Zulassung CH", value: "Eigenbau (51%-Regel)" },
+    ],
+    quickSpecs: [
+      { value: "490", unit: "KG", label: "Useful Load" },
+      { value: "900", unit: "NM", label: "Max Range" },
+      { value: "679", unit: "FPM", label: "Climb Rate" },
+      { value: "145", unit: "KTAS", label: "Cruise Speed" },
+      { value: "28", unit: "LT/HR", label: "Fuel Burn" },
+      { value: "4", unit: "SEATS", label: "Max Persons" },
     ],
     heroColor: "from-neutral-800 to-brand-950",
     video: { videoId: "LbO28tBc1hU", startSeconds: 40, endSeconds: 55 },

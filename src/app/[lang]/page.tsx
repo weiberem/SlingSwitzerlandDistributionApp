@@ -63,10 +63,10 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.1]"
             >
-              Fliegen Sie Ihre
+              Dream. Build.
               <br />
               <span className="text-brand-500">
-                Träume.
+                Fly.
               </span>
             </motion.h1>
 
@@ -76,9 +76,9 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="mt-6 text-lg sm:text-xl text-neutral-400 max-w-2xl leading-relaxed"
             >
-              Entdecken Sie die preisgekrönten Sling Aircraft Flugzeuge.
-              Konfigurieren Sie Ihr Traumflugzeug online und erleben Sie
-              südafrikanische Ingenieurskunst auf Schweizer Niveau.
+              Ihr Traum vom eigenen Flugzeug beginnt hier. Als offizieller
+              Sling Aircraft Händler in der Schweiz begleiten wir Sie vom
+              ersten Kit-Teil bis zum ersten Flug.
             </motion.p>
 
             <motion.div
@@ -150,7 +150,7 @@ export default function HomePage() {
             description="Von sportlichen Zweisitzern bis zum komfortablen Viersitzer-Tourer: Die Sling-Familie bietet für jedes Bedürfnis das perfekte Flugzeug."
           />
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="mt-16 space-y-8">
             {aircraft.map((plane, index) => (
               <motion.div
                 key={plane.id}
@@ -159,60 +159,63 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Link
-                  href={plane.externalUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group block relative overflow-hidden rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-brand-600/50 transition-all duration-500 hover:shadow-xl hover:shadow-brand-600/10"
-                >
+                <div className="group relative overflow-hidden rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-brand-600/50 transition-all duration-500 hover:shadow-xl hover:shadow-brand-600/10">
                   {/* Red top accent */}
                   <div className="h-1 bg-gradient-to-r from-brand-700 via-brand-500 to-brand-700 opacity-60 group-hover:opacity-100 transition-opacity" />
 
-                  <div className="h-48 relative overflow-hidden">
-                    <YouTubeBackground
-                      videoId={plane.video.videoId}
-                      startSeconds={plane.video.startSeconds}
-                      endSeconds={plane.video.endSeconds}
-                    />
-                    {/* Transparent red overlay on hover */}
-                    <div className="absolute inset-0 bg-brand-600/0 group-hover:bg-brand-600/10 transition-colors duration-500 z-10" />
-                  </div>
+                  <div className="grid grid-cols-1 lg:grid-cols-2">
+                    {/* Video left */}
+                    <div className="h-64 lg:h-auto lg:min-h-[320px] relative overflow-hidden">
+                      <YouTubeBackground
+                        videoId={plane.video.videoId}
+                        startSeconds={plane.video.startSeconds}
+                        endSeconds={plane.video.endSeconds}
+                      />
+                      <div className="absolute inset-0 bg-brand-600/0 group-hover:bg-brand-600/10 transition-colors duration-500 z-10" />
+                    </div>
 
-                  <div className="p-6">
-                    <div className="flex items-start justify-between">
-                      <div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-brand-400 transition-colors">
-                          {plane.name}
-                        </h3>
-                        <p className="text-sm text-brand-500 font-medium mt-1">
-                          {plane.tagline}
-                        </p>
+                    {/* Content right */}
+                    <div className="p-8">
+                      <h3 className="text-2xl font-bold text-white group-hover:text-brand-400 transition-colors">
+                        {plane.name}
+                      </h3>
+                      <p className="text-sm text-brand-500 font-medium mt-1">
+                        {plane.tagline}
+                      </p>
+
+                      <p className="mt-4 text-sm text-neutral-400 leading-relaxed">
+                        {plane.description}
+                      </p>
+
+                      {/* Quick Specs Grid */}
+                      <div className="mt-6 grid grid-cols-3 sm:grid-cols-6 gap-3">
+                        {plane.quickSpecs.map((qs) => (
+                          <div key={qs.label} className="text-center bg-neutral-800/50 rounded-lg py-2.5 px-1">
+                            <div className="text-brand-500 font-bold text-lg leading-tight">
+                              {qs.value}
+                            </div>
+                            <div className="text-[10px] font-semibold text-neutral-300 uppercase">
+                              {qs.unit}
+                            </div>
+                            <div className="text-[9px] text-neutral-500 uppercase mt-0.5">
+                              {qs.label}
+                            </div>
+                          </div>
+                        ))}
                       </div>
-                    </div>
 
-                    <p className="mt-3 text-sm text-neutral-400 leading-relaxed">
-                      {plane.description}
-                    </p>
-
-                    <div className="mt-4 flex items-center gap-4 text-xs text-neutral-500">
-                      <span className="flex items-center gap-1">
-                        <Users className="h-3.5 w-3.5" />
-                        {plane.seats} Sitze
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Clock className="h-3.5 w-3.5" />
-                        {plane.specs.find(
-                          (s) => s.label === "Reisegeschwindigkeit"
-                        )?.value}
-                      </span>
-                    </div>
-
-                    <div className="mt-4 flex items-center text-sm font-medium text-brand-500 group-hover:gap-3 gap-2 transition-all">
-                      Detaillierte Informationen
-                      <ChevronRight className="h-4 w-4" />
+                      <a
+                        href={plane.externalUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-6 inline-flex items-center text-sm font-medium text-brand-500 hover:text-brand-400 group-hover:gap-3 gap-2 transition-all"
+                      >
+                        Detaillierte Informationen
+                        <ChevronRight className="h-4 w-4" />
+                      </a>
                     </div>
                   </div>
-                </Link>
+                </div>
               </motion.div>
             ))}
           </div>
