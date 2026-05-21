@@ -279,6 +279,85 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* EAS & Eigenbau Regulation */}
+      <section className="py-24 lg:py-32 bg-neutral-950">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] mb-4 text-brand-500">
+                Eigenbau in der Schweiz
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+                Bauen Sie Ihr eigenes Flugzeug
+              </h2>
+              <p className="mt-4 text-neutral-400 leading-relaxed">
+                In der Schweiz werden Sling Flugzeuge als Kit nach der
+                Eigenbau-Regel (51%) gebaut und unter BAZL-Aufsicht zugelassen.
+                Dieser Weg ermöglicht es Ihnen, Ihr Flugzeug selbst zu bauen
+                und dabei von professioneller Begleitung zu profitieren.
+              </p>
+              <p className="mt-4 text-neutral-400 leading-relaxed">
+                <strong className="text-white">Brauchen Sie Unterstützung beim Bau?</strong>{" "}
+                Wir helfen Ihnen gerne – kontaktieren Sie uns für individuelle Baubegleitung.
+              </p>
+              <div className="mt-8">
+                <a
+                  href="https://experimental.ch"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-brand-600 text-white font-semibold rounded-lg hover:bg-brand-500 transition-colors"
+                >
+                  Mehr über EAS erfahren
+                  <ChevronRight className="h-4 w-4" />
+                </a>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-neutral-900 rounded-2xl p-8 border border-neutral-800"
+            >
+              <div className="h-1 bg-brand-600 rounded-full mb-6" />
+              <h3 className="text-lg font-bold text-white mb-3">
+                EAS – Experimental Aviation of Switzerland
+              </h3>
+              <p className="text-sm text-neutral-400 leading-relaxed mb-4">
+                Seit 1963 begleitet die EAS ihre rund 500 Mitglieder beim Bau
+                eigener Flugzeuge. Die Flotte umfasst ca. 130 fliegende und
+                120 weitere Flugzeuge im Bauprozess.
+              </p>
+              <p className="text-sm text-neutral-400 leading-relaxed mb-4">
+                Als Spartenverband des Aero-Club der Schweiz vereinfacht und
+                standardisiert die EAS den gesamten Prozess – von der
+                technischen Beurteilung neuer Projekte über die Bauberatung
+                bis zur Verkehrszulassung.
+              </p>
+              <div className="space-y-3 mt-6">
+                {[
+                  "Technische Beurteilung durch EAS-Ingenieure",
+                  "Bauberatung und Qualitätsüberwachung",
+                  "Kontrolle der Flugversuche",
+                  "Zweijährliche Lufttüchtigkeitsprüfung (BAZL)",
+                  "Offizielle Lärmmessungen",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 shrink-0" />
+                    <span className="text-sm text-neutral-300">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Configurator CTA - Red gradient band */}
       <section className="relative py-24 lg:py-32 overflow-hidden">
         {/* Red gradient background */}
