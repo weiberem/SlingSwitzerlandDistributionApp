@@ -63,30 +63,29 @@ export default function Navigation({
   const pathWithoutLocale = pathname.replace(/^\/(de|fr|it)/, "") || "/";
 
   return (
-    <nav
-      className={clsx(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-        isScrolled
-          ? "bg-black/95 backdrop-blur-md shadow-lg shadow-black/30 border-b border-brand-600/30"
-          : "bg-transparent"
-      )}
-    >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
-          {/* Logo with fading black background */}
-          <Link href={`/${lang}`} className="relative flex items-center group -ml-4">
-            <div className="relative px-4 py-2">
-              {/* Black background that fades out */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black via-black to-transparent rounded-r-2xl" />
-              <Image
-                src="/logos/SlingSwitzerlandLogo.jpg"
-                alt="Sling Aircraft Switzerland"
-                width={220}
-                height={70}
-                className="relative h-14 w-auto object-contain"
-                priority
-              />
-            </div>
+    <nav className="fixed top-0 left-0 right-0 z-50">
+      {/* Full-width black gradient bar that fades out at the bottom */}
+      <div
+        className={clsx(
+          "absolute inset-0 transition-all duration-500",
+          isScrolled
+            ? "bg-black/95 backdrop-blur-md shadow-lg shadow-black/30 border-b border-brand-600/30"
+            : "bg-gradient-to-b from-black via-black/80 to-transparent"
+        )}
+      />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-24 items-center justify-between">
+          {/* Logo - large */}
+          <Link href={`/${lang}`} className="flex items-center group shrink-0">
+            <Image
+              src="/logos/SlingSwitzerlandLogo.jpg"
+              alt="Sling Aircraft Switzerland"
+              width={280}
+              height={90}
+              className="h-16 sm:h-20 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

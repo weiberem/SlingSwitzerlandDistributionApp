@@ -14,18 +14,22 @@ export const metadata: Metadata = {
     template: "%s | Sling Aircraft Switzerland",
   },
   description:
-    "Offizieller Sling Aircraft Händler für die Schweiz. Verkauf, Konfiguration, Service und Wartung von Sling 2, Sling 4, Sling TSi und Sling High Wing Flugzeugen.",
+    "Offizieller Sling Aircraft Händler für die Schweiz. Verkauf, Konfiguration, Service und Wartung von Sling 2, Sling TSi und Sling High Wing Flugzeugen.",
   keywords: [
     "Sling Aircraft",
     "Flugzeug kaufen Schweiz",
     "Leichtflugzeug",
-    "UL Flugzeug",
     "Sling 2",
-    "Sling 4",
     "Sling TSi",
+    "Sling High Wing",
     "Sportflugzeug",
-    "Flugzeug Konfigurator",
+    "Kit Flugzeug",
+    "Eigenbau Flugzeug Schweiz",
   ],
+  icons: {
+    icon: "/favicon.png",
+    apple: "/apple-touch-icon.png",
+  },
   authors: [{ name: "Sling Aircraft Switzerland" }],
   openGraph: {
     type: "website",
