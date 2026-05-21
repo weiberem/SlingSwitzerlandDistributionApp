@@ -175,12 +175,25 @@ export default function HomeClient({
 
                     {/* Content right */}
                     <div className="p-8">
-                      <h3 className="text-2xl font-bold text-white group-hover:text-brand-400 transition-colors">
-                        {plane.name}
-                      </h3>
-                      <p className="text-sm text-brand-500 font-medium mt-1">
-                        {plane.tagline}
-                      </p>
+                      <div className="flex items-start justify-between gap-4">
+                        <div>
+                          <h3 className="text-2xl font-bold text-white group-hover:text-brand-400 transition-colors">
+                            {plane.name}
+                          </h3>
+                          <p className="text-sm text-brand-500 font-medium mt-1">
+                            {plane.tagline}
+                          </p>
+                        </div>
+                        <a
+                          href={plane.externalUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="shrink-0 inline-flex items-center gap-1 text-xs font-medium text-neutral-400 hover:text-brand-400 transition-colors mt-1"
+                        >
+                          {t.moreDetails}
+                          <ChevronRight className="h-3.5 w-3.5" />
+                        </a>
+                      </div>
 
                       <div className="mt-6 grid grid-cols-3 sm:grid-cols-6 gap-3">
                         {plane.quickSpecs.map((qs) => (
@@ -210,15 +223,6 @@ export default function HomeClient({
                         >
                           {t.configureNow}
                           <ArrowRight className="h-4 w-4" />
-                        </a>
-                        <a
-                          href={plane.externalUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-5 py-2.5 border border-neutral-700 bg-neutral-800/40 text-white text-sm font-semibold rounded-lg hover:border-brand-500 hover:bg-neutral-800 hover:text-brand-400 transition-all"
-                        >
-                          {t.details}
-                          <ChevronRight className="h-4 w-4" />
                         </a>
                         <a
                           href="https://slingaircraft.com/technical-documents/aircraft-manuals/"
