@@ -204,15 +204,26 @@ export default function HomePage() {
                         ))}
                       </div>
 
-                      <a
-                        href={plane.externalUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-6 inline-flex items-center text-sm font-medium text-brand-500 hover:text-brand-400 group-hover:gap-3 gap-2 transition-all"
-                      >
-                        Detaillierte Informationen
-                        <ChevronRight className="h-4 w-4" />
-                      </a>
+                      <div className="mt-6 flex flex-wrap gap-4">
+                        <a
+                          href={plane.externalUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center text-sm font-medium text-brand-500 hover:text-brand-400 gap-2 transition-all"
+                        >
+                          Detaillierte Informationen
+                          <ChevronRight className="h-4 w-4" />
+                        </a>
+                        <a
+                          href="https://slingaircraft.com/technical-documents/aircraft-manuals/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center text-sm font-medium text-neutral-400 hover:text-white gap-2 transition-all"
+                        >
+                          Aircraft Manuals
+                          <ChevronRight className="h-4 w-4" />
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
