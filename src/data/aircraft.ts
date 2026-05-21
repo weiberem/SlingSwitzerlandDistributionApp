@@ -30,7 +30,7 @@ export const aircraft: Aircraft[] = [
     description:
       "Zweisitziger Tiefdecker mit Rotax 912iS. Ideal als Trainingsflugzeug, für Reisen zu zweit und den Einstieg in die Fliegerei.",
     longDescription:
-      "Der Sling 2 ist ein zweisitziger Tiefdecker in Ganzmetallbauweise, angetrieben vom bewährten Rotax 912iS (100 PS). Er besticht durch hervorragende Flugeigenschaften, niedrige Betriebskosten und ein attraktives Design. In der Schweiz wird der Sling 2 als Kit (Eigenbau) nach der 51%-Regel unter BAZL-Aufsicht gebaut und zugelassen. Die Ganzmetallkonstruktion sorgt für Langlebigkeit und einfache Wartung.",
+      "Der Sling 2 ist ein zweisitziger Tiefdecker in Ganzmetallbauweise, angetrieben vom bewährten Rotax 912iS (100 PS). Er besticht durch hervorragende Flugeigenschaften, niedrige Betriebskosten und ein attraktives Design. In der Schweiz wird der Sling 2 als Kit nach der Eigenbau-Regel (51%) unter BAZL-Aufsicht gebaut und zugelassen. Benötigen Sie Unterstützung beim Bau? Wir helfen Ihnen gerne – kontaktieren Sie uns.",
     seats: 2,
     specs: [
       { label: "Motor", value: "Rotax 912iS (100 PS)" },
@@ -62,7 +62,7 @@ export const aircraft: Aircraft[] = [
     description:
       "Viersitziger Tiefdecker mit turbogeladenem Rotax 916iS (160 PS). Das Flaggschiff für anspruchsvolle Piloten.",
     longDescription:
-      "Der Sling TSi setzt neue Massstäbe in der Klasse der leichten Reiseflugzeuge. Mit dem turbogeladenen Rotax 916iS Motor (160 PS) und Constant-Speed-Propeller erreicht er beeindruckende Reisegeschwindigkeiten. Die hochmoderne Garmin-Avionik, die Premium-Kabine in Leder und die Möglichkeit zur Single Lever Power Control (SLPC) machen den TSi zum ultimativen Reiseflugzeug. In der Schweiz als Eigenbau-Kit unter BAZL-Aufsicht zugelassen.",
+      "Der Sling TSi setzt neue Massstäbe in der Klasse der leichten Reiseflugzeuge. Mit dem turbogeladenen Rotax 916iS Motor (160 PS) und Constant-Speed-Propeller erreicht er beeindruckende Reisegeschwindigkeiten. Die hochmoderne Garmin-Avionik, die Premium-Kabine in Leder und die Möglichkeit zur Single Lever Power Control (SLPC) machen den TSi zum ultimativen Reiseflugzeug. In der Schweiz als Kit nach der Eigenbau-Regel (51%) unter BAZL-Aufsicht zugelassen. Benötigen Sie Unterstützung beim Bau? Wir helfen Ihnen gerne – kontaktieren Sie uns.",
     seats: 4,
     specs: [
       { label: "Motor", value: "Rotax 916iS Turbo (160 PS)" },
@@ -94,7 +94,7 @@ export const aircraft: Aircraft[] = [
     description:
       "Viersitziger Hochdecker mit Rotax 916iS (160 PS) und Carbon-Composite-Rumpf. Hervorragende Sicht und STOL-Fähigkeiten.",
     longDescription:
-      "Der Sling High Wing vereint modernste Bauweise mit den Vorteilen eines Hochdeckers. Mit einem einteiligen Carbon-Composite-Rumpf, dem Rotax 916iS Turbomotor (160 PS) und vier Sitzen bietet er Vielseitigkeit für anspruchsvolle Einsätze. Die hervorragende Sicht nach unten, die robusten Fahrwerksbeine und die STOL-Fähigkeiten machen ihn ideal für Bergfliegerei, Beobachtungsflüge und Abenteuer. In der Schweiz als Eigenbau-Kit unter BAZL-Aufsicht zugelassen.",
+      "Der Sling High Wing vereint modernste Bauweise mit den Vorteilen eines Hochdeckers. Mit einem einteiligen Carbon-Composite-Rumpf, dem Rotax 916iS Turbomotor (160 PS) und vier Sitzen bietet er Vielseitigkeit für anspruchsvolle Einsätze. Die hervorragende Sicht nach unten, die robusten Fahrwerksbeine und die STOL-Fähigkeiten machen ihn ideal für Bergfliegerei, Beobachtungsflüge und Abenteuer. In der Schweiz als Kit nach der Eigenbau-Regel (51%) unter BAZL-Aufsicht zugelassen. Benötigen Sie Unterstützung beim Bau? Wir helfen Ihnen gerne – kontaktieren Sie uns.",
     seats: 4,
     specs: [
       { label: "Motor", value: "Rotax 916iS Turbo (160 PS)" },

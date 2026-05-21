@@ -151,11 +151,29 @@ export default function KontaktPage() {
                           <option value="configurator">
                             Konfiguration besprechen
                           </option>
+                          <option value="kit-support">
+                            Kit-Bau Unterstützung
+                          </option>
                           <option value="service">
                             Service & Wartung
                           </option>
                           <option value="parts">Ersatzteile</option>
                           <option value="other">Sonstiges</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-neutral-300 mb-1.5">
+                          Flugzeugmodell
+                        </label>
+                        <select
+                          className="w-full px-4 py-3 rounded-lg border border-neutral-700 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all bg-neutral-800 text-white"
+                          defaultValue=""
+                        >
+                          <option value="">Kein bestimmtes Modell</option>
+                          <option value="sling-2">Sling 2 / LSA</option>
+                          <option value="sling-tsi">Sling TSi</option>
+                          <option value="sling-high-wing">Sling High Wing</option>
                         </select>
                       </div>
 
