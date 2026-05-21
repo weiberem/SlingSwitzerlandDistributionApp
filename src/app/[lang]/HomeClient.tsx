@@ -765,7 +765,7 @@ export default function HomeClient({
                           {t.locations}
                         </div>
                         <div className="font-medium">
-                          Thun Airport & Zweisimmen
+                          Flugplatzstrasse Thun & Hangar 7 Zweisimmen
                         </div>
                       </div>
                     </div>

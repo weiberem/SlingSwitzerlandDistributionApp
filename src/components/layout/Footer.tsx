@@ -88,7 +88,7 @@ export default function Footer({
               </a>
               <div className="flex items-center gap-3 text-sm">
                 <MapPin className="h-4 w-4 text-brand-500 shrink-0" />
-                <span>Thun Airport & Zweisimmen</span>
+                <span>Flugplatzstrasse Thun & Hangar 7 Zweisimmen</span>
               </div>
               <a
                 href="https://instagram.com/sling_aircraft_switzerland"
