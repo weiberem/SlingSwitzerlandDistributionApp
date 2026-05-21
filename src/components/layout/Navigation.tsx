@@ -64,13 +64,13 @@ export default function Navigation({
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
-      {/* Full-width black gradient bar that fades out at the bottom */}
+      {/* Full-width black gradient bar that fades out well below the navbar */}
       <div
         className={clsx(
-          "absolute inset-0 transition-all duration-500",
+          "absolute left-0 right-0 top-0 transition-all duration-500",
           isScrolled
-            ? "bg-black/95 backdrop-blur-md shadow-lg shadow-black/30 border-b border-brand-600/30"
-            : "bg-gradient-to-b from-black via-black/80 to-transparent"
+            ? "h-full bg-black/95 backdrop-blur-md shadow-lg shadow-black/30 border-b border-brand-600/30"
+            : "h-[200%] bg-gradient-to-b from-black via-black/60 to-transparent"
         )}
       />
 
