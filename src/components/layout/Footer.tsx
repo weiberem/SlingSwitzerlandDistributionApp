@@ -76,13 +76,13 @@ export default function Footer({
                 <span>Thun Airport & Zweisimmen</span>
               </div>
               <a
-                href="https://instagram.com/slingaircraftswitzerland"
+                href="https://instagram.com/sling_aircraft_switzerland"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-sm hover:text-brand-400 transition-colors"
               >
                 <Instagram className="h-4 w-4 text-brand-500" />
-                @slingaircraftswitzerland
+                @sling_aircraft_switzerland
               </a>
             </div>
           </div>

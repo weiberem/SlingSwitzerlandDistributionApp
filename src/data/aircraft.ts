@@ -28,6 +28,7 @@ export interface Aircraft {
   features: string[];
   video: AircraftVideo;
   externalUrl: string;
+  image: string;
 }
 
 export const aircraft: Aircraft[] = [
@@ -61,6 +62,7 @@ export const aircraft: Aircraft[] = [
     heroColor: "from-brand-900 to-brand-800",
     video: { videoId: "LbO28tBc1hU", startSeconds: 20, endSeconds: 40 },
     externalUrl: "https://slingaircraft.com/aircraft/sling-tsi/",
+    image: "/images/aircraft/sling-tsi/sling-tsi_01.jpg",
     features: [
       "Rotax 916iS Turbomotor (160 PS)",
       "Garmin G3X Touch Dual-Screen + G5 Backup",

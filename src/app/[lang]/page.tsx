@@ -167,10 +167,6 @@ export default function HomePage() {
                         {plane.tagline}
                       </p>
 
-                      <p className="mt-4 text-sm text-neutral-400 leading-relaxed">
-                        {plane.description}
-                      </p>
-
                       {/* Quick Specs Grid */}
                       <div className="mt-6 grid grid-cols-3 sm:grid-cols-6 gap-3">
                         {plane.quickSpecs.map((qs) => (
@@ -190,12 +186,19 @@ export default function HomePage() {
 
                       <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3">
                         <a
+                          href="#kontakt"
+                          className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-600 text-white text-sm font-semibold rounded-lg hover:bg-brand-500 transition-colors"
+                        >
+                          Anfrage senden
+                          <ArrowRight className="h-4 w-4" />
+                        </a>
+                        <a
                           href={plane.externalUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center text-sm font-medium text-brand-500 hover:text-brand-400 gap-2 transition-all"
+                          className="inline-flex items-center text-sm font-medium text-neutral-400 hover:text-brand-400 gap-2 transition-all"
                         >
-                          Detaillierte Informationen
+                          Details
                           <ChevronRight className="h-4 w-4" />
                         </a>
                         <a
@@ -204,7 +207,7 @@ export default function HomePage() {
                           rel="noopener noreferrer"
                           className="inline-flex items-center text-sm font-medium text-neutral-400 hover:text-white gap-2 transition-all"
                         >
-                          Aircraft Manuals
+                          Manuals
                           <ChevronRight className="h-4 w-4" />
                         </a>
                         <a
@@ -213,7 +216,7 @@ export default function HomePage() {
                           rel="noopener noreferrer"
                           className="inline-flex items-center text-sm font-medium text-neutral-400 hover:text-brand-400 gap-2 transition-all"
                         >
-                          Bauanleitung ansehen
+                          Bauanleitung
                           <ChevronRight className="h-4 w-4" />
                         </a>
                       </div>

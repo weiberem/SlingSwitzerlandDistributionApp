@@ -138,11 +138,6 @@ export default function Navigation({
               </AnimatePresence>
             </div>
 
-            <span
-              className="ml-3 px-5 py-2.5 text-sm font-semibold rounded-lg bg-neutral-700 text-neutral-400 cursor-default"
-            >
-              Bald verfügbar
-            </span>
           </div>
 
           {/* Mobile Menu Button */}
@@ -195,13 +190,6 @@ export default function Navigation({
                 ))}
               </div>
 
-              <div className="pt-4">
-                <span
-                  className="block w-full text-center px-5 py-3 bg-neutral-700 text-neutral-400 font-semibold rounded-lg cursor-default"
-                >
-                  Bald verfügbar
-                </span>
-              </div>
             </div>
           </motion.div>
         )}
