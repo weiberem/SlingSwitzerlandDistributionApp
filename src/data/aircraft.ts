@@ -77,7 +77,7 @@ export const aircraft: Aircraft[] = [
   {
     id: "sling-high-wing",
     name: "Sling High Wing",
-    tagline: "4-Seat High-Wing | Rotax 916iS | STOL",
+    tagline: "4-Seat High-Wing | Rotax 916iS",
     description:
       "Viersitziger Hochdecker mit Rotax 916iS (160 PS) und Carbon-Composite-Rumpf. Hervorragende Sicht und STOL-Fähigkeiten.",
     longDescription:
@@ -119,7 +119,7 @@ export const aircraft: Aircraft[] = [
   {
     id: "sling-2",
     name: "Sling 2",
-    tagline: "2-Seat Trainer & Touring Aircraft",
+    tagline: "2-Seat Trainer & Touring | Tricycle or Taildragger",
     description:
       "Zweisitziger Tiefdecker mit Rotax 912iS. Ideal als Trainingsflugzeug, für Reisen zu zweit und den Einstieg in die Fliegerei.",
     longDescription:
