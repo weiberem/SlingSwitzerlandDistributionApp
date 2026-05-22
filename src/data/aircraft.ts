@@ -77,7 +77,7 @@ export const aircraft: Aircraft[] = [
   {
     id: "sling-high-wing",
     name: "Sling High Wing",
-    tagline: "4-Seat High-Wing | Rotax 916iS",
+    tagline: "4-Seat High-Wing | Rotax 916iS | Tricycle or Taildragger | Glider Tow",
     description:
       "Viersitziger Hochdecker mit Rotax 916iS (160 PS) und Carbon-Composite-Rumpf. Hervorragende Sicht und STOL-Fähigkeiten.",
     longDescription:
@@ -86,7 +86,7 @@ export const aircraft: Aircraft[] = [
     specs: [
       { label: "Motor", value: "Rotax 916iS Turbo (160 PS)" },
       { label: "Bauweise", value: "Composite-Rumpf / Metall-Flügel" },
-      { label: "Konfiguration", value: "Hochdecker, Tricycle" },
+      { label: "Konfiguration", value: "Hochdecker, Tricycle oder Taildragger" },
       { label: "Kraftstoff", value: "198 L (Standard)" },
       { label: "Spannweite", value: "9.9 m" },
       { label: "Propeller", value: "MT MTV-6 Constant-Speed" },
@@ -113,6 +113,7 @@ export const aircraft: Aircraft[] = [
       "BRS Rettungsfallschirm optional",
       "Exzellente Sicht nach unten",
       "STOL-Fähigkeiten",
+      "Als Schleppflugzeug für Segelflugzeuge geeignet",
       "Quickbuild-Optionen verfügbar",
     ],
   },
