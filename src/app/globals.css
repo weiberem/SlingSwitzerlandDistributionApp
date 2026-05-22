@@ -21,8 +21,8 @@
   --color-neutral-500: #737373;
   --color-neutral-600: #525252;
   --color-neutral-700: #404040;
-  --color-neutral-800: #1a1a1a;
-  --color-neutral-900: #111111;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #181818;
   --color-neutral-950: #080808;
 
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
@@ -62,4 +62,11 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-brand-600);
+}
+
+/* Subtle lift for dark cards: inner top highlight + soft drop shadow */
+.surface-card {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 8px 24px rgba(0, 0, 0, 0.5);
 }
