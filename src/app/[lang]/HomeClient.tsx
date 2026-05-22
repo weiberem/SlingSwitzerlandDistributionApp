@@ -157,6 +157,13 @@ export default function HomeClient({
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="group relative overflow-hidden rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-brand-600/50 transition-all duration-500 hover:shadow-xl hover:shadow-brand-600/10">
+                  <a
+                    href={plane.externalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={plane.name}
+                    className="absolute inset-0 z-10"
+                  />
                   <div className="h-1 bg-gradient-to-r from-brand-700 via-brand-500 to-brand-700 opacity-60 group-hover:opacity-100 transition-opacity" />
 
                   <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -184,15 +191,6 @@ export default function HomeClient({
                             {plane.tagline}
                           </p>
                         </div>
-                        <a
-                          href={plane.externalUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="shrink-0 inline-flex items-center gap-1 text-xs font-medium text-neutral-400 hover:text-brand-400 transition-colors mt-1"
-                        >
-                          {t.moreDetails}
-                          <ChevronRight className="h-3.5 w-3.5" />
-                        </a>
                       </div>
 
                       <div className="mt-6 grid grid-cols-3 sm:grid-cols-6 gap-3">
@@ -214,7 +212,7 @@ export default function HomeClient({
                         ))}
                       </div>
 
-                      <div className="mt-6 flex flex-wrap gap-3">
+                      <div className="relative z-20 mt-6 flex flex-wrap gap-3">
                         <a
                           href="https://slingaircraftconfig.app"
                           target="_blank"
