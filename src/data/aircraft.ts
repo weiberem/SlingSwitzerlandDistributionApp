@@ -35,7 +35,7 @@ export const aircraft: Aircraft[] = [
   {
     id: "sling-tsi",
     name: "Sling TSi",
-    tagline: "4-Seat Touring Aircraft | Rotax 916iS",
+    tagline: "4-Seat Touring Aircraft | Rotax 916iS | Glider Tow",
     description:
       "Viersitziger Tiefdecker mit turbogeladenem Rotax 916iS (160 PS). Das Flaggschiff für anspruchsvolle Piloten.",
     longDescription:
@@ -71,6 +71,7 @@ export const aircraft: Aircraft[] = [
       "BRS Rettungsfallschirm optional",
       "Premium-Lederausstattung",
       "Aithre / Mountain High Sauerstoffsystem optional",
+      "Als Schleppflugzeug für Segelflugzeuge geeignet",
       "Quickbuild-Optionen verfügbar",
     ],
   },
@@ -120,7 +121,7 @@ export const aircraft: Aircraft[] = [
   {
     id: "sling-2",
     name: "Sling 2",
-    tagline: "2-Seat Trainer & Touring | Tricycle or Taildragger",
+    tagline: "2-Seat Trainer & Touring | Tricycle or Taildragger | Glider Tow",
     description:
       "Zweisitziger Tiefdecker mit Rotax 912iS. Ideal als Trainingsflugzeug, für Reisen zu zweit und den Einstieg in die Fliegerei.",
     longDescription:
@@ -155,6 +156,7 @@ export const aircraft: Aircraft[] = [
       "Garmin Autopilot optional",
       "Magnum 601 Rettungsfallschirm optional",
       "Long Range Tanks optional",
+      "Als Schleppflugzeug für Segelflugzeuge geeignet",
       "Quickbuild-Optionen verfügbar",
       "Eigenbau-Zulassung in der Schweiz (BAZL)",
     ],
