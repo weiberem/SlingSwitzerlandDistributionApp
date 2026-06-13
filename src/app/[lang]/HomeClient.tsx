@@ -156,7 +156,7 @@ export default function HomeClient({
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <div className="group relative overflow-hidden rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-brand-600/50 transition-all duration-500 hover:shadow-xl hover:shadow-brand-600/10">
+                <div className="surface-card group relative overflow-hidden rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-brand-600/50 transition-all duration-500 hover:shadow-xl hover:shadow-brand-600/10">
                   <a
                     href={plane.externalUrl}
                     target="_blank"
@@ -289,7 +289,7 @@ export default function HomeClient({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                className="group p-8 rounded-2xl bg-neutral-900/50 border border-neutral-800 hover:border-brand-600/40 hover:bg-neutral-900 transition-all duration-500"
+                className="surface-card group p-8 rounded-2xl bg-neutral-900/50 border border-neutral-800 hover:border-brand-600/40 hover:bg-neutral-900 transition-all duration-500"
               >
                 <div className="w-12 h-12 rounded-xl bg-brand-600/20 flex items-center justify-center mb-6 group-hover:bg-brand-600/30 transition-colors">
                   <feature.icon className="h-6 w-6 text-brand-500" />
@@ -324,7 +324,7 @@ export default function HomeClient({
             viewport={{ once: true }}
             className="mt-16 max-w-3xl mx-auto"
           >
-            <div className="bg-neutral-900 rounded-2xl p-8 border border-neutral-800">
+            <div className="surface-card bg-neutral-900 rounded-2xl p-8 border border-neutral-800">
               <div className="h-1 bg-brand-600 rounded-full mb-6" />
               <h3 className="text-lg font-bold text-white mb-2">
                 {t.projectTitle}
@@ -368,7 +368,7 @@ export default function HomeClient({
           </motion.div>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+            <div className="surface-card bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
               <h4 className="font-semibold text-white text-sm mb-3">
                 {t.advantagesTitle}
               </h4>
@@ -382,7 +382,7 @@ export default function HomeClient({
               </div>
             </div>
 
-            <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+            <div className="surface-card bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
               <h4 className="font-semibold text-white text-sm mb-3">
                 {t.easTitle}
               </h4>
@@ -400,7 +400,7 @@ export default function HomeClient({
               </a>
             </div>
 
-            <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+            <div className="surface-card bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
               <h4 className="font-semibold text-white text-sm mb-3">
                 {t.bazlTitle}
               </h4>
@@ -476,7 +476,7 @@ export default function HomeClient({
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-neutral-900 rounded-2xl p-8 border border-neutral-800 hover:border-brand-600/40 transition-all duration-500"
+              className="surface-card bg-neutral-900 rounded-2xl p-8 border border-neutral-800 hover:border-brand-600/40 transition-all duration-500"
             >
               <div className="h-1 bg-brand-600 rounded-full mb-6" />
               <h3 className="text-xl font-bold text-white mb-2">
@@ -512,7 +512,7 @@ export default function HomeClient({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="bg-neutral-900 rounded-2xl p-8 border border-neutral-800 hover:border-brand-600/40 transition-all duration-500"
+              className="surface-card bg-neutral-900 rounded-2xl p-8 border border-neutral-800 hover:border-brand-600/40 transition-all duration-500"
             >
               <div className="h-1 bg-brand-600 rounded-full mb-6" />
               <h3 className="text-xl font-bold text-white mb-2">
@@ -565,7 +565,7 @@ export default function HomeClient({
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-neutral-900 rounded-2xl p-8 border border-neutral-800"
+                className="surface-card bg-neutral-900 rounded-2xl p-8 border border-neutral-800"
               >
                 <div className="h-1 bg-brand-600 rounded-full mb-6" />
                 {submitted ? (
@@ -737,7 +737,7 @@ export default function HomeClient({
                 transition={{ delay: 0.1 }}
                 className="space-y-6"
               >
-                <div className="bg-neutral-900 rounded-xl p-6 border border-neutral-800">
+                <div className="surface-card bg-neutral-900 rounded-xl p-6 border border-neutral-800">
                   <h3 className="font-bold text-white mb-4">
                     {tc.contactData}
                   </h3>
@@ -784,7 +784,7 @@ export default function HomeClient({
                   </div>
                 </div>
 
-                <div className="bg-neutral-900 rounded-xl p-6 border border-neutral-800">
+                <div className="surface-card bg-neutral-900 rounded-xl p-6 border border-neutral-800">
                   <h3 className="font-bold text-white mb-4">
                     {tc.availability}
                   </h3>
@@ -833,7 +833,7 @@ export default function HomeClient({
                   </a>
                 </div>
 
-                <div className="bg-neutral-900 rounded-xl p-6 border border-neutral-800">
+                <div className="surface-card bg-neutral-900 rounded-xl p-6 border border-neutral-800">
                   <div className="space-y-5">
                     {[
                       {
