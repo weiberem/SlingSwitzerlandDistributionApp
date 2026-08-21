@@ -65,7 +65,7 @@ export const aircraft: Aircraft[] = [
     image: "/images/aircraft/sling-tsi/sling-tsi_01.jpg",
     features: [
       "Rotax 916iS Turbomotor (160 PS)",
-      "Garmin G3X Touch Dual-Screen + G5 Backup",
+      "Garmin AXIS 11.6\" Dual Display",
       "MT Propeller mit Single Lever Power Control (SLPC)",
       "Garmin GTX 45R ADS-B Transponder",
       "BRS Rettungsfallschirm optional",
@@ -109,7 +109,7 @@ export const aircraft: Aircraft[] = [
     features: [
       "Rotax 916iS Turbomotor (160 PS)",
       "Carbon-Composite-Rumpfmittelteil",
-      "Garmin G3X Touch Dual-Screen + G5 Backup",
+      "Garmin AXIS 11.6\" Dual Display",
       "MT Propeller mit Single Lever Power Control (SLPC)",
       "BRS Rettungsfallschirm optional",
       "Exzellente Sicht nach unten",
@@ -152,7 +152,7 @@ export const aircraft: Aircraft[] = [
     features: [
       "Ganzmetall-Bauweise (Aluminium)",
       "Rotax 912iS Einspritzmotor (100 PS)",
-      "Garmin G3X Touch + G5 Backup Avionik",
+      "Garmin AXIS 11.6\" Display",
       "Garmin Autopilot optional",
       "Magnum 601 Rettungsfallschirm optional",
       "Long Range Tanks optional",
